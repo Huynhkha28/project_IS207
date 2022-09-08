@@ -9,6 +9,11 @@
 }
 
 /*HEADER*/
+.header{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
 .header__navbars{
     height: 70px;
     color: var(--while-color);
@@ -31,13 +36,18 @@
 }
 .navbars__item:hover{
     background-color: rgba(0,0,0, 0.1);
-    transform: translateY(-3px);
+    cursor: pointer;
 }
-.navbars-link{
+
+.navbars__link{
     text-decoration: none;
     color: black;
     font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 20px;
+}
+.navbars__item:hover .navbars__link{
+    transform: translateY(-3px);
 }
 /*HEADER-SEARCH*/
 .navbars__search{
@@ -49,6 +59,7 @@
     top:28px;
     left: 26px;
     z-index: 1;
+    color: black;
 }
 .search__input{
     width: 500px;
@@ -61,25 +72,43 @@
     transition: border-color .2s ease-in-out;
     outline: none;
 }
+
+/*HEADER-LOGIN*/
 .navbars__login{
-    
+    position: relative;
+    left: 55px;
 }
-.navbars__button{
-    background-color: black;
-    border-radius: 999px;
-    color: #fff;
+.navbars__button--dn{
+    background-color: var(--black-color);
+    border-radius: 20px;
+    color: var(--while-color);
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
     padding: 9px 20px;
     text-align: center;
     position: relative;
-    top:14px;
+    top:16px;
     left: 54px;
 }
-.navbars__button:hover{
+.navbars__button--dn:hover{
     opacity: 0.8;
 }
-.navbars__button__name:hover{
+.navbars__button--dn:hover .navbars__button__hover--dn{
     transform: translateY(-2px);
+}
+
+.navbars__button--dk{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    top: 16px;
+    left:36px;
+    font-size: 16px;
+}
+
+.navbars__button--dk:hover .navbars__button__hover--dk{
+    transform: translateY(-2px);
+    cursor: pointer;
 }
