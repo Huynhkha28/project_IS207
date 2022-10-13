@@ -1,4 +1,8 @@
 :root{
     --while-color:#fff;
     --black-color: #000;
+    --base-color: rgba(66, 62, 62, 0.248);
+}
+.color-html{
+    color:orangered
 }
