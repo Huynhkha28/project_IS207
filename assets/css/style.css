@@ -200,20 +200,49 @@
     transform: translateX(-50%);
     text-align: center;
     height: 30em;
-    width: 1000px;
+    width: 100%;
     background: url("/assets/img/Pathway.png") no-repeat;
+    background-size: cover;
 }
 
-.img__pathway {
+.pathway__content{
+    display: flex;
+    margin-top: 24px;
+}
+
+.pathway__content .front_end__pathway{
     border: 2px solid #e8e8e8;
     border-radius: 16px;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    padding: 25px;
-    margin: 25px;
-    width: 20%;
-    height: 100%;
+    padding: 24px;
+    width: 500px;
 }
+
+.pathway__content .back_end__pathway{
+    border: 2px solid #e8e8e8;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    width: 500px;
+    margin-left: 24px;
+}
+
+.p__pathway{
+    margin-bottom: 24px;
+}
+
+.btn__pathway {
+    border: 1px solid;
+    padding: 9px 16px;
+    text-align:center;
+    border-radius: 999px;
+    text-decoration: none;
+    color:white;
+    background-color: gold;
+}
+
 
 .introduce__background{
     height: 60px;
