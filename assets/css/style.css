@@ -85,23 +85,24 @@
 
 .navbars_notification{
     position: relative;
-    top: 18px;
-    right: 18px;
+    top: 30%;
+    right: 90px;
     font-size: 20px;
     color: #000;
 }
 .navbars__button--dn{
     background-color: var(--black-color);
     border-radius: 20px;
+    border: none;
     color: var(--while-color);
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    padding: 9px 20px;
+    padding: 9px 18px;
     text-align: center;
     position: relative;
-    top:14px;
-    left: 23px;
+    top:18%;
+    float: right;
 }
 .navbars__button--dn:hover{
     opacity: 0.8;
@@ -115,8 +116,10 @@
     border: none;
     background-color: transparent;
     position: relative;
-    top: 16px;
+    top: 32%;
     font-size: 16px;
+    float: left;
+    text-align: center;
 }
 
 .navbars__button--dk:hover .navbars__button__hover--dk{
@@ -190,6 +193,56 @@
     margin-top: 8px;
     font-size: 14px;
 }
+
+.pathway__introduce {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    height: 30em;
+    width: 100%;
+    background: url("/assets/img/Pathway.png") no-repeat;
+    background-size: cover;
+}
+
+.pathway__content{
+    display: flex;
+    margin-top: 24px;
+}
+
+.pathway__content .front_end__pathway{
+    border: 2px solid #e8e8e8;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    width: 500px;
+}
+
+.pathway__content .back_end__pathway{
+    border: 2px solid #e8e8e8;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    width: 500px;
+    margin-left: 24px;
+}
+
+.p__pathway{
+    margin-bottom: 24px;
+}
+
+.btn__pathway {
+    border: 1px solid;
+    padding: 9px 16px;
+    text-align:center;
+    border-radius: 999px;
+    text-decoration: none;
+    color:white;
+    background-color: gold;
+}
+
 
 .introduce__background{
     height: 60px;
