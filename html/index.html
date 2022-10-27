@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="../assets/font/fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js">
     <script src="../js/index.js"></script>
     <title>Document</title>
 </head>
@@ -17,10 +18,10 @@
             <nav class="row header__navbars">
                 <div class="col-4 navbar-expand-sm navbars__menu">
                     <ul class="navbars__list">
-                        <li class="nav-item navbars__item"><a href="" class="navbars__link">Home</a></li>
+                        <li class="nav-item navbars__item"><a href="../html/index.html" class="navbars__link">Home</a></li>
                         <li class="nav-item navbars__item"><a href="" class="navbars__link">Góp ý</a></li>
                         <li class="nav-item navbars__item"><a href="" class="navbars__link">Đánh giá</a></li>
-                        <!--<li class="nav-item navbars__item"><a href="" class="navbars__link">Video đã xem</a></li>-->
+                        <li class="nav-item navbars__item"><a href="" class="navbars__link">Hỗ trợ</a></li>
                     </ul>
                 </div>
                 <div class="col-6 navbars__search">
@@ -38,8 +39,8 @@
             <div class="col-1 content__sibebar">
                 <div class="sidebar">
                     <ul class="sidebar__list">
-                        <li class="sidebar__item"><a href="" class="sidebar__link"><i class="fa-solid fa-route sidebar__icon"></i><span class="sidebar__title">Lộ trình</span></a></li>
-                        <li class="sidebar__item"><a href="" class="sidebar__link"><i class="fa-solid fa-book sidebar__icon"></i><span class="sidebar__title">Khóa học</span></a></li>
+                        <li class="sidebar__item"><a href="../html/pathway.html" class="sidebar__link"><i class="fa-solid fa-route sidebar__icon"></i><span class="sidebar__title">Lộ trình</span></a></li>
+                        <li class="sidebar__item"><a href="#ds" class="sidebar__link"><i class="fa-solid fa-book sidebar__icon"></i><span class="sidebar__title">Khóa học</span></a></li>
                         <li class="sidebar__item"><a href="" class="sidebar__link"><i class="fa-solid fa-blog sidebar__icon"></i><span class="sidebar__title">Blog</span></a></li>
                     </ul>
                 </div>
@@ -48,8 +49,46 @@
                 <div class="container__introduce">
                     <div class="introduce__background">
                         <h1 class="introduce__title"><i class="fa-solid fa-code"></i> Let's learn for future</h1>
-                        <img class="introduce_img" src="../assets/img/introduce.png">
-                            
+                        <img class="introduce__img" src="../assets/img/introduce.png">
+                    </div>
+                </div>
+                <div class="content__course mt-5">
+                    <h3 id="ds">Danh sách các khóa học</h3>
+                    <div class="row mt-3">
+                        <h3>Front-end</h3>
+                        <a class="col-3 course__item mt-3">
+                            <div class="course__img" style = "background-image: url(../assets/img/htmlandcss.jpeg);"></div>
+                            <div class="course__name"><span>Làm quen với HTML và CSS</span></div>
+                            <div class="course__price"><span>1.200.000 VNĐ</span></div>
+                            <button class="course__button mt-3">Xem chi tiết</button>
+                        </a>
+                        <a class="col-3 course__item mt-3">
+                            <div class="course__img" style = "background-image: url(../assets/img/javascript_course.jpg);"></div>
+                            <div class="course__name"><span>Thành thạo ngôn ngữ Javascript</span></div>
+                            <div class="course__price"><span>1.500.000 VNĐ</span></div>
+                            <button class="course__button mt-3">Xem chi tiết</button>
+                        </a>
+                        <a class="col-3 course__item  mt-3">
+                            <div class="course__img" style = "background-image: url(../assets/img/react_logo.png);"></div>
+                            <div class="course__name"><span>Lập Trình Front-end với React JS</span></div>
+                            <div class="course__price"><span>1.800.000 VNĐ</span></div>
+                            <button class="course__button mt-3">Xem chi tiết</button>
+                        </a>
+                        </div>
+                        <div class="row mt-3">
+                            <h3>Back-end</h3>
+                        <a class="col-3 course__item mt-3">
+                            <div class="course__img" style = "background-image: url(../assets/img/php_logo.png);"></div>
+                            <div class="course__name"><span>Lập Trình Back-end với PHP</span></div>
+                            <div class="course__price"><span>1.500.000 VNĐ</span></div>
+                            <button class="course__button mt-3">Xem chi tiết</button>
+                        </a>
+                        <a class="col-3 course__item mt-3">
+                            <div class="course__img" style = "background-image: url(../assets/img/mysql_course.image);"></div>
+                            <div class="course__name"><span>Hệ quản trị cơ sở dữ liệu MySQL</span></div>
+                            <div class="course__price"><span>1.000.000 VNĐ</span></div>
+                            <button class="course__button mt-3">Xem chi tiết</button>
+                        </a>
                     </div>
                 </div>
             </div>
