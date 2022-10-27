@@ -6,7 +6,6 @@
 }
 .body{
     box-sizing: border-box;
-    
 }
 
 /*HEADER*/
@@ -183,10 +182,7 @@
     position: relative;
  
 }
-.sidebar__link:hover{
-    
 
-}
 .sidebar__icon{
     text-align: center;
 }
@@ -290,9 +286,6 @@
 
 .content__course h3{
     font-size: 28px;
-}
-.course__item {
-
 }
 .course__img
 {
