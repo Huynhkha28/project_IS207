@@ -6,7 +6,6 @@
 }
 .body{
     box-sizing: border-box;
-    
 }
 
 /*HEADER*/
@@ -130,6 +129,7 @@
 .content{
     width: auto;
     display: flex;
+    height: 2000px;
 }
 .content__sidebar{
     position: relative;
@@ -182,10 +182,7 @@
     position: relative;
  
 }
-.sidebar__link:hover{
-    
 
-}
 .sidebar__icon{
     text-align: center;
 }
@@ -251,6 +248,14 @@
     margin-right: 16px;
     margin-top: 16px;
 }
+.introduce__img{
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+}
+.container__introduce{
+    height: 850px;
+}
 .introduce__title{
     font-size: 40px;
     text-transform: uppercase;
@@ -279,17 +284,51 @@
     }
   }
 
+.content__course h3{
+    font-size: 28px;
+}
+.course__img
+{
+    padding-top: 57%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 22px;
+}
 
-.introduce__name__programing{
-    display: flex;
-    justify-content: space-around;
-    top:20px;
-    position: relative;
+.course__name{
+    margin-top: 10px;
 }
-.introduce__icon{
-    width: 150px;
-    height: 150px;
+.course__name span {
+    font-size: 20px;
+    font-weight: 700;
 }
+.course__price {
+    margin-top:10px ;
+}
+.course__price span{
+    font-weight: 700;
+}
+.course__button{
+    outline: none;
+    padding:10px;
+    width: 50%;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #000;
+    border-radius: 16px;
+    color: #fff;
+    
+}
+
+.course__button:hover{
+    background-color:#757171;
+    color:#000;
+}
+
+/*-----------------------------FOOTER---------------------------*/
 .footer{
     background-color: var(--black-color);
     color:#fff;

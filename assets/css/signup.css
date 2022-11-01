@@ -24,3 +24,12 @@
 .add-width{
     width:120%;
 }
+.back-home{
+    width: 250px;
+    position: relative;
+    top: 5px;
+  }
+  .btn-backhome{
+      text-decoration: none;
+      color: black;
+  }
