@@ -1,0 +1,17 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: inherit;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.body{
+    box-sizing: border-box;
+}
+.app{
+    height: 2000px;
+}
+.category__header h1{
+    text-align: center;
+    font-size: 40px;
+}
+
