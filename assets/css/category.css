@@ -10,8 +10,20 @@
 .app{
     height: 2000px;
 }
+.content{
+
+}
 .category__header h1{
     text-align: center;
     font-size: 40px;
-}
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
 
+}
+.input__danhmuc{
+    width: 300px;
+    padding: 5px 0;
+}
+.add__danhmuc__btn{
+    width: 100px;
+}

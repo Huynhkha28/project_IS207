@@ -1,4 +1,7 @@
 <?php
+    include "config.php";
+?>
+<?php
     class Database{
         public $host = DB_HOST;
         public $user = DB_USER;
@@ -9,19 +12,19 @@
         
         public function __construct()
         {
-            $this ->connectDB();
+            $this->connectDB();
         }
         private function connectDB()
         {
-            $this->link = new mysqli($this -> host, $this->user, $this->pass, $this->dbname);
-            if(!$this->link){
-                $this->error ="Connect fail".$this->link->connect_error;
+            $this->link = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
+            if($this->link){
+                $this->error ="Connection fail".$this->link->connect_error;
                 return false;
             }
         }
-        public function select($querry)
+        public function select($query)
         {
-            $result = $this ->link -> querry($querry) or die($this->link->error.__LINE__);
+            $result = $this ->link ->query($query) or die($this->link->error.__LINE__);
             if($result->num_rows > 0)
             {
                 return $result;
@@ -31,9 +34,9 @@
             }
         }
 
-        public function insert($querry)
+        public function insert($query)
         {
-            $insert_row = $this ->link -> querry($querry) or die($this->link->error.__LINE__);
+            $insert_row = $this->link->query($query) or die($this->link->error.__LINE__);
             if($insert_row)
             {
                 return $insert_row;
@@ -43,8 +46,8 @@
             }
         }
 
-        public function update($querry){
-            $update_row =  $this ->link -> querry($querry) or die($this->link->error.__LINE__);
+        public function update($query){
+            $update_row =  $this->link->query($query) or die($this->link->error.__LINE__);
             if($update_row){
                 return $update_row;
             }
@@ -52,8 +55,8 @@
                 return false;
             }
         }
-        public function delete($querry){
-            $delete_row =  $this ->link -> querry($querry) or die($this->link->error.__LINE__);
+        public function delete($query){
+            $delete_row =  $this->link->query($query) or die($this->link->error.__LINE__);
             if($delete_row){
                 return $delete_row;
             }
@@ -62,4 +65,3 @@
             }
         }
     }
-?>
