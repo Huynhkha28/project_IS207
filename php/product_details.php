@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/details.css">
+   
     <link rel="stylesheet" href="../assets/font/fontawesome-free-6.1.2-web/css/all.min.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js">
     <script src="../../js/index.js"></script>
+    <link rel="stylesheet" href="../assets/css/style_button.scss"> 
     <title>Chi tiết khóa học</title>
 </head>
 <body>
@@ -46,10 +48,27 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-11 content__container">
-                
+            <div class="col-11 content__container__product row">
+                <div class="course__product col-8">
+                    <div class="course__title d-flex justify-content-center mt-3">
+                        <h1>Làm quen HTML và CSS</h1>
+                    </div>
+                    <div class="course__describe mt-4">
+                            <span class="describe__title">Mô tả khóa học</span>
+                            <p class="course__para">a</p>
+                            <span class="describe__title">Tóm tắt kiến thức</span>
+                            <p class="course_para">a</p>
+                    </div>
+                </div>
+                <div class="course__interface col-4 mt-4">
+                    <div class="interface__image" style= "background-image: url(../assets/img/htmlandcss.jpeg); background-repeat: no-repeat;background-size: contain;background-position: center;border-radius: 22px;padding-top: 57%;"></div>
+                    <div class="interface__price d-flex justify-content-center mt-3">
+                        <h3>1.500.000 VNĐ</h3>
+                    </div>
+                    <div class="d-flex justify-content-center mt-2"><button class="interface__button"> Đăng ký mua ngay</button></div>
+                </div>
             </div>
         </section>
-    </div>
-</body>
-</html>
+<?php
+    include "footer.php";
+?>

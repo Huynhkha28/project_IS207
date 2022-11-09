@@ -1,0 +1,39 @@
+
+.course__title{
+    font-size: 24px;
+}
+.describe__title{
+    font-size: 20px;
+    display: block;
+    font-weight: 600;
+    
+}
+.course__para{
+    display: block;
+}
+.course__interface{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.interface__button{
+    display: block;
+    justify-content: center;
+}
+.interface__button {
+    padding: 4px 6px 8px;
+    border: 1px solid #000;
+    font-size: 24px;
+    border-radius: 8px;
+    background-color: #000;
+    color: white;
+}
+.interface__button:hover{
+    cursor: pointer;
+    border: 1px solid ;
+    background-color: white;
+    color:black;
+}
+

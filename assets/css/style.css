@@ -310,6 +310,9 @@
     font-weight: 700;
 }
 .course__button{
+    padding:10px;
+}
+.course__link__button{
     outline: none;
     padding:10px;
     width: 50%;
@@ -320,11 +323,15 @@
     background-color: #000;
     border-radius: 16px;
     color: #fff;
-    
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border:1px solid #000;
 }
 
-.course__button:hover{
-    background-color:#757171;
+.course__link__button:hover{
+    background-color:#fff;
+
     color:#000;
 }
 

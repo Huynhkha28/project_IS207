@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/base.css">
-    <link rel="stylesheet" href="../assets/css/details.css">
-    <link rel="stylesheet" href="../assets/font/fontawesome-free-6.1.2-web/css/all.min.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../assets/font/fontawesome-free-6.1.2-web/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js">
-    <script src="../../js/index.js"></script>
-    <title>Chi tiết khóa học</title>
+    <script src="../js/index.js"></script>
+    <title>Trang chủ</title>
 </head>
 <body>
     <div class="app">
@@ -36,31 +35,3 @@
                 </div>
             </nav>
         </header>
-        <section class="content">
-            <div class="col-1 content__sibebar">
-                <div class="sidebar">
-                    <ul class="sidebar__list">
-                        <li class="sidebar__item"><a href="../html/pathway.html" class="sidebar__link"><i class="fa-solid fa-route sidebar__icon"></i><span class="sidebar__title">Lộ trình</span></a></li>
-                        <li class="sidebar__item"><a href="./course.html" class="sidebar__link"><i class="fa-solid fa-book sidebar__icon"></i><span class="sidebar__title">Khóa học</span></a></li>
-                        <li class="sidebar__item"><a href="" class="sidebar__link"><i class="fa-solid fa-blog sidebar__icon"></i><span class="sidebar__title">Blog</span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-11 content__container__product">
-                <div class="course__product">
-                    <div class="course__title d-flex justify-content-center mt-3 ">
-                        <h1>Làm quen HTML và CSS</h1>
-                    </div>
-                    <div class="course__describe mt-4">
-                            <span class="describe__title">Mô tả khóa học</span>
-                            <p class="course__para">a</p>
-                            <span class="describe__title">Tóm tắt kiến thức</span>
-                            <p class="course_para">a</p>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-    </div>
-</body>
-</html>
