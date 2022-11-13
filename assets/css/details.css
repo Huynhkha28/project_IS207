@@ -9,14 +9,16 @@
     
 }
 .course__para{
-    display: block;
+    font-weight: 300;
 }
 .course__interface{
     display: flex;
     flex-direction: column;
-
 }
-
+.summary__list{
+    list-style-type: none;
+    font-weight: 300;
+}
 
 .interface__button{
     display: block;
@@ -36,4 +38,39 @@
     background-color: white;
     color:black;
 }
+.content__container__product{
+    height: 1400px;
+}
+.course__product{
+    height: 1200px;
+}
+.video__content{
+    border-radius: 2px;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.46);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0px);
+-webkit-backdrop-filter: blur(0px);
+border: 1px solid rgba(255, 255, 255, 0.41);
+}
+.video__head {
 
+}
+
+.video__id {
+    font-weight: 200;
+}
+
+.video__name {
+    font-weight: 200;
+}
+
+.video__time {
+    font-weight: 200;
+    min-width: 40px;
+}
+.video__plus{
+    width: 20px;
+    height: 20px;
+}

@@ -298,6 +298,7 @@
 
 .course__name{
     margin-top: 10px;
+    min-height: 40px;
 }
 .course__name span {
     font-size: 20px;
