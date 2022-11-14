@@ -97,11 +97,12 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    padding: 9px 18px;
+    padding: 0px 10px;
     text-align: center;
     position: relative;
-    top:18%;
     float: right;
+    height: 50%;
+    top:27%
 }
 .navbars__button--dn:hover{
     opacity: 0.8;
@@ -115,7 +116,6 @@
     border: none;
     background-color: transparent;
     position: relative;
-    top: 32%;
     font-size: 16px;
     float: left;
     text-align: center;
@@ -124,6 +124,35 @@
 .navbars__button--dk:hover .navbars__button__hover--dk{
     transform: translateY(-2px);
     cursor: pointer;
+}
+
+.navbars__button__dx__link{
+    text-decoration: none;
+    position: relative;
+    top:18%;
+    color: #fff;
+}
+.navbars__button__dx__link:hover{
+    color: #000;
+
+}
+.navbars__button__dx{
+    align-items: center;
+    border-radius: 10px;
+    background-color: #000;
+    top: 20%;
+    height: 50%;
+    position: relative;
+    padding: 0 6px;
+    cursor: pointer;
+}
+.navbars__button__dx:hover{
+    background-color: #e8e8e8;
+}
+.navbars__button__hello{
+    color: #000;
+    position: relative;
+    top:30%;
 }
 /*CONTENT*/
 .content{

@@ -1,3 +1,7 @@
+<?php
+ob_start();
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +16,32 @@
     <title>Đăng nhập tài khoản</title>
 </head>
 <body>
+    <?php
+    $name ="";
+    $mk = "";
+    $kq = "";
+    if(isset($_POST['dangnhap']))
+    {
+        require "../inc/myconnect.php";
+        $name = $_POST['name'];
+        $mk = $_POST['mk'];
+        $sql = "SELECT * FROM `users` WHERE `user_name` = '$name' and `user_password` = '$mk'";
+        $result = $conn->query($sql);
+        if($result->num_rows> 0)
+        {
+            while($row = $result->fetch_assoc())
+            {
+                $_SESSION['name'] = $name;
+                $_SESSION['email'] = $row['user_email'];
+                header('Location: index.php');
+                $row = $result->fetch_assoc(); 
+            }
+        }
+        else{
+            $kq = "Thông tin không đúng vui lòng kiểm tra lại";
+        }
+    }
+    ?>
     <div class="container flex">
         <div class="row justify-content-center background-form pd">
             <div class="col-md-12">
@@ -33,17 +63,17 @@
                             <h3 class="mb-4 ">Đăng nhập</h3>
                         </div>
                     </div>
-        <form action="#" class="signin-form">
+        <form action="#" class="signin-form" method="POST">
         <div class="form-group mb-3">
         <label class="label" for="name">Tên đăng nhập</label>
-        <input type="text" class="form-control " required="">
+        <input type="text" name="name"class="form-control " required="">
         </div>
         <div class="form-group mb-3">
         <label class="label" for="password">Mật khẩu</label>
-        <input type="password" class="form-control"  required="">
+        <input type="password" name="mk"class="form-control"  required="">
         </div>
         <div class="form-group">
-        <button type="submit" class="form-control btn btn-dark submit px-1">Đăng nhập</button>
+        <button type="submit" name="dangnhap" class="form-control btn btn-dark submit px-1">Đăng nhập</button>
         </div>
         <div class="form-group d-md-flex">
         <div class="w-50 text-left">
@@ -54,6 +84,7 @@
         </div>
         <div class="w-50 text-md-right ms-5 ">
         <a href="#" class="text-decoration-none link-dark hover ">Quên mật khẩu</a>
+        <P style="color:red"><?php echo $kq; ?></p>
         </div>
         </div>
         </form>
@@ -64,3 +95,4 @@
         </div>
 </body>
 </html>
+<?php ob_get_status(); ?>

@@ -54,9 +54,6 @@ backdrop-filter: blur(0px);
 -webkit-backdrop-filter: blur(0px);
 border: 1px solid rgba(255, 255, 255, 0.41);
 }
-.video__head {
-
-}
 
 .video__id {
     font-weight: 200;

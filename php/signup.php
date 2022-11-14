@@ -1,3 +1,7 @@
+<?php
+ob_start();
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +16,32 @@
     <title>Đăng ký tài khoản</title>
 </head>
 <body>
+<?php
+$name = "" ;
+$email = "" ;
+$mk= "";
+$kqdk ="";
+if(isset($_POST['dangky']))
+{
+    require '../inc/myconnect.php';
+    $name  = $_POST['username'] ;
+    $email = $_POST['email'];
+    $mk = $_POST['password'];
+
+    $sql="INSERT INTO  `users` (`user_name`, `user_password`,`user_email`) 
+    VALUES ('$name','$mk' ,'$email')";
+        // echo  $mk;
+    if (mysqli_query($conn, $sql)) {
+        $name = "" ;
+        $email = "" ;
+        $mk= "";
+        $kqdk = "Đăng ký thành công";
+    } else {
+        $kqdk = "Đăng ký không thành công xin hay kiểm tra lại thông tin";
+    }
+    mysqli_close($conn);
+}
+?>
     <div class="container flex">
         <div class="row justify-content-center background-form pd">
             <div class="col-md-12">
@@ -47,11 +77,12 @@
             <input type="email" class="form-control add-width"  required="" name="email" id="email">
             </div>
         <div class="form-group">
-        <button type="submit" class="form-control btn btn-dark submit px-4">Đăng ký</button>
+        <button type="submit" class="form-control btn btn-dark submit px-4" name="dangky">Đăng ký</button>
         </div>
         <div class="form-group d-md-flex">
         <div class="w-100 text-md-right ">
         <a href="#" class="text-decoration-none link-dark hover">Quên mật khẩu</a>
+        <P style="color:red"><?php echo $kqdk; ?></p>
         </div>
         </div>
         </form>
@@ -62,3 +93,4 @@
         </div>
 </body>
 </html>
+<?php ob_end_flush(); ?>
