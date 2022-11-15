@@ -152,8 +152,55 @@
 .navbars__button__hello{
     color: #000;
     position: relative;
-    top:30%;
+    top:10%;
+    height: fit-content;
 }
+
+/*DROP DOWN BTN */
+.dropbtn {
+    background-color: transparent;
+    color: #000;
+    padding: 16px 0  ;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 10px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.profile__btn{
+    outline: none;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
 /*CONTENT*/
 .content{
     width: auto;

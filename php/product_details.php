@@ -36,8 +36,21 @@
                         if(isset($_SESSION['name']))
                         {
                             echo '<div class="col-3 navbars__login d-flex justify-content-end">';
-                            echo'<div class="navbars__button__hello me-3"><span class="me-2">Xin chào</span><b>' . $_SESSION['name'] . '</b></div>';
-							echo '<div class="navbars__button__dx"><a href="logout.php" class="navbars__button__dx__link">Đăng xuất!</a></div>';
+                            echo'<div class="navbars__button__hello me-3">
+                                    <span class="me-2">Xin chào</span>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">
+                                            <b>' . $_SESSION['name'] . '</b>'.
+                                            '<i class="fa-sharp fa-solid fa-user ms-2"></i>'.
+                                        '</button>'.
+                                        '<div class="dropdown-content">
+                                            <a href="profile.php">Thông tin người dùng</a>
+                                            <a href="mycourse.php">Khóa học của tôi</a>
+                                            <a href="logout.php">Đăng xuất</a>
+                                        </div>'.
+                                    '</div>'.
+                                '</div>';
+							//echo '<div class="navbars__button__dx"><a href="logout.php" class="navbars__button__dx__link">Đăng xuất!</a></div>';
                         }
                         else{
                             echo '<div class="col-3 navbars__login d-flex justify-content-end">';
