@@ -1,9 +1,7 @@
 
 function signUp() {
-    location.href = "../html/signup.html";
+    location.href = "./signup.php";
 }
-
-
  function signIn() {
-    location.href = "../html/login.html";
+    location.href = "./login.php";
 };

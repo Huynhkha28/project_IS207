@@ -1,5 +1,6 @@
 <?php
     include "header.php";
+
 ?>
 <section class="content">
             <div class="col-1 content__sibebar">
@@ -12,12 +13,7 @@
                 </div>
             </div>
             <div class="col-11 content__container">
-                <div class="container__introduce">
-                    <div class="introduce__background">
-                        <h1 class="introduce__title"><i class="fa-solid fa-code"></i> Let's learn for future</h1>
-                        <img class="introduce__img" src="../assets/img/introduce.png">
-                    </div>
-                </div>
+
                 <div class="content__course mt-5">
                     <h3 id="ds">Danh sách các khóa học</h3>
                     <div class="row mt-3">
