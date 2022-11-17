@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.bundle.min.js" integrity="sha512-BOsvKbLb0dB1IVplOL9ptU1EYA+LuCKEluZWRUYG73hxqNBU85JBIBhPGwhQl7O633KtkjMv8lvxZcWP+N3V3w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/index.js"></script>
-    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../assets/css/<?php echo $css_link?>">
+    <title><?php echo $title?></title>
 </head>
 <body>
     <div class="app">
@@ -45,7 +46,7 @@
                                             '<i class="fa-sharp fa-solid fa-user ms-2"></i>'.
                                         '</button>'.
                                         '<div class="dropdown-content">
-                                            <a href="profile.php">Thông tin người dùng</a>
+                                            <a href="profile.php?user_name='.$_SESSION['name'].'">Thông tin người dùng</a>
                                             <a href="mycourse.php">Khóa học của tôi</a>
                                             <a href="logout.php">Đăng xuất</a>
                                         </div>'.

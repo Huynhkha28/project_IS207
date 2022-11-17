@@ -1,6 +1,11 @@
 <?php
-    include "header.php";
+    $title = "Trang chủ";
 ?>
+<?php
+    include "header.php";
+    
+?>
+
 <section class="content">
             <div class="col-1 content__sibebar">
                 <div class="sidebar">
