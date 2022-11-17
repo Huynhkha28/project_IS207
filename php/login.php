@@ -33,6 +33,7 @@ ob_start();
             {
                 $_SESSION['name'] = $name;
                 $_SESSION['email'] = $row['user_email'];
+                $_SESSION['logged_in'] = true;
                 header('Location: index.php');
                 $row = $result->fetch_assoc(); 
             }

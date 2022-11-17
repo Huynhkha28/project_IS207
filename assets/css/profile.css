@@ -1,0 +1,39 @@
+.content__profile{
+    height: 500px;
+}
+.content{
+    height: 900px;
+}
+.profile__container{
+    height: 500px;
+}
+.btn__change {
+    align-items: center;
+}
+.btn__change a{
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 10px;
+   
+}
+.btn__change a:hover{
+    color: aliceblue;
+    background-color: #000;
+    cursor: pointer;
+}
+.btn__info{
+    float: right;
+}
+.avatar__btn{
+    align-items: center;
+}
+.avatar__img {
+    height: 250px;
+    width: 300px;
+}
+.info__title{
+    font-weight: 600;
+}
+.info__inside{
+    float:right;
+}
