@@ -39,10 +39,10 @@
     color:black;
 }
 .content__container__product{
-    height: 1400px;
+    height: auto;
 }
 .course__product{
-    height: 1200px;
+    height: auto;
 }
 .video__content{
     border-radius: 2px;
@@ -55,14 +55,9 @@ backdrop-filter: blur(0px);
 border: 1px solid rgba(255, 255, 255, 0.41);
 }
 
-.video__id {
+.video__id .video__name {
     font-weight: 200;
 }
-
-.video__name {
-    font-weight: 200;
-}
-
 .video__time {
     font-weight: 200;
     min-width: 40px;

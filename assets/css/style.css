@@ -37,16 +37,23 @@
 }
 .navbars__item{
     list-style: none;
-    padding: 22px 15px 14px 15px;
+    
 }
 .navbars__item:hover{
     background-color: rgba(0,0,0, 0.1);
     cursor: pointer;
     border-bottom: 2px solid #333;
 }
-
+.navbars__link:hover{
+    background-color: rgba(0,0,0, 0.1);
+}
 .navbars__link{
+    position: relative;
+    top:40%;
     text-decoration: none;
+    
+    padding: 27px 20px 18px 20px;
+    background-color: #fff;
     color: black;
     font-size: 16px;
     height: 20px;
@@ -205,7 +212,7 @@
 .content{
     width: auto;
     display: flex;
-    height: 2000px;
+    height: auto;
 }
 .content__sidebar{
     position: relative;
@@ -388,7 +395,7 @@
 }
 .course__button{
     padding:10px;
-display: flex;
+    display: flex;
     justify-content: center;
 }
 .course__link__button{
@@ -409,7 +416,7 @@ display: flex;
 }
 
 .course__link__button:hover{
-    background-color:#fff;
+    background-color:rgb(148, 148, 148);
     color:#000;
 }
 
