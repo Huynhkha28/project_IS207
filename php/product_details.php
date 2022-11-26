@@ -44,8 +44,8 @@
                                             '<i class="fa-sharp fa-solid fa-user ms-2"></i>'.
                                         '</button>'.
                                         '<div class="dropdown-content">
-                                            <a href="profile.php">Thông tin người dùng</a>
-                                            <a href="mycourse.php">Khóa học của tôi</a>
+                                            <a href="profile.php?user_name='.$_SESSION['name'].'">Thông tin người dùng</a>
+                                            <!--<a href="mycourse.php">Khóa học của tôi</a>-->
                                             <a href="logout.php">Đăng xuất</a>
                                         </div>'.
                                     '</div>'.
@@ -67,7 +67,7 @@
                     <ul class="sidebar__list">
                         <li class="sidebar__item"><a href="../html/pathway.html" class="sidebar__link"><i class="fa-solid fa-route sidebar__icon"></i><span class="sidebar__title">Lộ trình</span></a></li>
                         <li class="sidebar__item"><a href="./course.php" class="sidebar__link"><i class="fa-solid fa-book sidebar__icon"></i><span class="sidebar__title">Khóa học</span></a></li>
-                        <li class="sidebar__item"><a href="" class="sidebar__link"><i class="fa-solid fa-blog sidebar__icon"></i><span class="sidebar__title">Blog</span></a></li>
+                        <li class="sidebar__item"><a href="./blog.php" class="sidebar__link"><i class="fa-solid fa-blog sidebar__icon"></i><span class="sidebar__title">Blog</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -88,7 +88,6 @@
                     <div class="course__describe mt-4">
                             <span class="describe__title">Mô tả khóa học</span>
                             <div class="course__para mt-2"><p><?php echo $row['course_describe']?></p></div>
-
                             <span class="describe__title mt-4">Tóm tắt kiến thức</span>
                             <ul class="summary__list">
                             <?php
@@ -110,25 +109,26 @@
                         <div class="describe__title d-flex justify-content-between">
                             <span >Nội dung khóa học</span>
                         </div>
-
                         <?php
                         $sql_describe = " SELECT * FROM course_video WHERE course_id = $id";
                         $resultDescribe = $conn->query($sql_describe);
                         if($resultDescribe->num_rows>0)
                         {
+                            $number= 1;
                             while($row_describe=$resultDescribe->fetch_assoc())
                                 {   
                                  ?>
                                   <div class="row ms-4">
                             <div class="video__content col-12 d-flex justify-content-between mt-1">
                                 <div class="video__head d-flex">
-                                    <div class="video__id me-2"><span><i class="fa-solid fa-code me-2"></i><?php echo $row_describe['video_id']?>.</span></div>
+                                    <div class="video__id me-2"><span><i class="fa-solid fa-code me-2"></i><?php echo $number?>.</span></div>
                                     <div class="video__name"><span><?php echo $row_describe['video_name']?></span></div>
                                 </div>
                                 <div class="video__time"><span ><?php echo $row_describe['video_time']?></span></div>
                             </div>
                         </div>
     <?php
+    $number++;
 }
 }
 ?>    
