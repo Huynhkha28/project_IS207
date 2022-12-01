@@ -37,16 +37,23 @@
 }
 .navbars__item{
     list-style: none;
-    padding: 22px 15px 14px 15px;
+    
 }
 .navbars__item:hover{
     background-color: rgba(0,0,0, 0.1);
     cursor: pointer;
     border-bottom: 2px solid #333;
 }
-
+.navbars__link:hover{
+    background-color: rgba(0,0,0, 0.1);
+}
 .navbars__link{
+    position: relative;
+    top:40%;
     text-decoration: none;
+    
+    padding: 27px 20px 18px 20px;
+    background-color: #fff;
     color: black;
     font-size: 16px;
     height: 20px;
@@ -205,7 +212,7 @@
 .content{
     width: auto;
     display: flex;
-    height: 2000px;
+    height: auto;
 }
 .content__sidebar{
     position: relative;
@@ -392,27 +399,31 @@
     justify-content: center;
 }
 .course__link__button{
-    outline: none;
-    padding:10px;
-    width: 70%;
-    cursor: pointer;
-    border: none;
-    font-size: 18px;
-    font-weight: 500;
-    background-color: #000;
-    border-radius: 16px;
-    color: #fff;
-    display: flex;
-    text-decoration: none;
-    justify-content: center;
-    border:1px solid #000;
+    padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
 }
 
 .course__link__button:hover{
-    background-color:#fff;
-    color:#000;
+    background-color: #010101;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
-
+.course__link__button:active {
+    transform: translateY(-1px);
+  }
 /*-----------------------------FOOTER---------------------------*/
 .footer{
     background-color: var(--black-color);

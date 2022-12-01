@@ -26,8 +26,7 @@ if(isset($_POST['dangky']))
     require '../inc/myconnect.php';
     $name  = $_POST['username'] ;
     $email = $_POST['email'];
-    $mk = $_POST['password'];
-
+    $mk = md5($_POST['password']);
     $sql="INSERT INTO  `users` (`user_name`, `user_password`,`user_email`) 
     VALUES ('$name','$mk' ,'$email')";
         // echo  $mk;

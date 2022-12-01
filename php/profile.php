@@ -94,18 +94,47 @@
                         </div>
                     </div>
 <?php
-    $sqlPurchasedCourse= "SELECT c.course_id, c.course_name, c.course_image FROM `users` AS u INNER JOIN `purchased_course` AS p ON u.user_id = p.user_id INNER JOIN `courses` AS c ON p.course_id = c.course_id where `user_name` = '$user_name';";
-    $resultPurchasedCourse = $conn->query($sqlPurchasedCourse);
-    $row_purchased=$resultPurchasedCourse->fetch_assoc();
+    $sqlPurchasedCourse= "SELECT c.course_id, c.course_name, c.course_image FROM `users` AS u INNER JOIN `purchased_course` AS p ON u.user_id = p.user_id INNER JOIN `courses` AS c ON p.course_id = c.course_id where p.user_name = '$user_name'";
+    $resultPurchasedCourse = $conn->query($sqlPurchasedCourse);   
 ?>                                 
-                        <div class="info__course row">
-                            <h3 class="info__course__title">Khóa học đã mua</h3>
-                            <div class="purchased__course col-3 mt-3">
-                                <div class="col-3 course__item mt-3 ">
-                                    <div class="course__img" style = "background-image: url(../assets/img/<?php echo $row_purchased['course_image']?>);"></div>
-                                    <div class="course__name"><span><?php echo $row_purchased['course_name']?></span></div>
-                                    <div class="course__button"><a class="course__link__button" href="mycourse.php?id=<?php echo $row_purchased['course_id']?>">Học ngay</a></div>
-                                </div>
+                        <div class="info__course row ">
+                            <h3 class="info__course__title">Khóa học của tôi</h3>
+                            <div class="purchased__course mt-3 row">
+                            <?php
+                                if($resultPurchasedCourse->num_rows>0)
+                                {
+                                    
+                                    while($row_purchased_profile=$resultPurchasedCourse->fetch_assoc())
+                                        {
+                                            $video_id=$row_purchased_profile['course_id'];                     
+                                            switch($video_id)
+                                            {
+                                                case 1:
+                                                    $video_id= 133;
+                                                    break;
+                                                case 2:
+                                                    $video_id= 163;
+                                                    break;
+                                                case 3:
+                                                    $video_id= 180;
+                                                    break;
+                                                case 4:
+                                                    $video_id= 214;
+                                                    break;
+                                                case 5:
+                                                    $video_id= 247;
+                                                    break;
+                                            } 
+                                         ?>
+                                            <div class="col-3 course__item mt-3 ">
+                                                <div class="course__img" style = "background-image: url(../assets/img/<?php echo $row_purchased_profile['course_image']?>);"></div>
+                                                <div class="course__name"><span><?php echo $row_purchased_profile['course_name']?></span></div>
+                                                <div class="course__button"><a class="course__link__button" href="learn.php?course_id=<?php echo $row_purchased_profile['course_id']?>&videoid=<?php echo $video_id?>">Học ngay</a></div>
+                                            </div>
+            <?php
+        }
+    }
+    ?>                          
                             </div>
                         </div>                
         </div>

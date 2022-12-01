@@ -1,11 +1,11 @@
 .content__profile{
-    height: 500px;
+    height: auto;
 }
 .content{
-    height: 900px;
+    height: fit-content;
 }
 .profile__container{
-    height: 500px;
+    height: 350px;
 }
 .btn__change {
     align-items: center;

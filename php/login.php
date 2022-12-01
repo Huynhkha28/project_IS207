@@ -1,6 +1,6 @@
 <?php
 ob_start();
-    session_start();
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,13 +24,14 @@ ob_start();
     {
         require "../inc/myconnect.php";
         $name = $_POST['name'];
-        $mk = $_POST['mk'];
+        $mk = md5($_POST['mk']);
         $sql = "SELECT * FROM `users` WHERE `user_name` = '$name' and `user_password` = '$mk'";
         $result = $conn->query($sql);
         if($result->num_rows> 0)
         {
             while($row = $result->fetch_assoc())
             {
+                $_SESSION['userid'] =$row['user_id'];
                 $_SESSION['name'] = $name;
                 $_SESSION['email'] = $row['user_email'];
                 $_SESSION['logged_in'] = true;
@@ -64,7 +65,7 @@ ob_start();
                             <h3 class="mb-4 ">Đăng nhập</h3>
                         </div>
                     </div>
-        <form action="#" class="signin-form" method="POST">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" class="signin-form" method="POST">
         <div class="form-group mb-3">
         <label class="label" for="name">Tên đăng nhập</label>
         <input type="text" name="name"class="form-control " required="">
@@ -79,13 +80,13 @@ ob_start();
         <div class="form-group d-md-flex">
         <div class="w-50 text-left">
         <label class="checkbox-wrap checkbox-primary mb-0">Ghi nhớ tài khoản
-        <input type="checkbox" checked="">
+        <input type="checkbox" name="remember">
         <span class="checkmark"></span>
         </label>
         </div>
         <div class="w-50 text-md-right ms-5 ">
         <a href="#" class="text-decoration-none link-dark hover ">Quên mật khẩu</a>
-        <P style="color:red"><?php echo $kq; ?></p>
+        <P style="color:green"><?php echo $kq; ?></p>
         </div>
         </div>
         </form>

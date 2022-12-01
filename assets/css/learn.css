@@ -1,0 +1,31 @@
+.content{
+    height: auto;
+}
+.learn__course__video{
+    height:500px ;
+    width: 100%;
+    position: relative;
+}
+.list__course__content{
+    font-size: 15px;
+    font-weight: 300;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    overflow-y: overlay;
+    height: 500px;
+}
+.learn__course_list{
+    background-color: rgb(72, 81, 81);
+    
+}
+.list__course__item{
+    text-decoration: none;
+    color: black;
+}
+.border{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.border:hover{
+    background-color:  rgba(0,0,0,0.1);
+}

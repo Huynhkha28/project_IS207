@@ -23,19 +23,18 @@
             <nav class="row header__navbars">
                 <div class="col-4 navbar-expand-sm navbars__menu">
                     <ul class="navbars__list">
-                        <li class="nav-item navbars__item"><a href="../php/index.php" class="navbars__link">Trang chủ</a></li>
-                        <li class="nav-item navbars__item"><a href="" class="navbars__link">Góp ý</a></li>
-                        <li class="nav-item navbars__item"><a href="" class="navbars__link">Đánh giá</a></li>
-                        <li class="nav-item navbars__item"><a href="" class="navbars__link">Hỗ trợ</a></li>
+                        <li class="nav-item navbars__item "><a href="../php/index.php" class="navbars__link">Trang chủ</a></li>
+                        <li class="nav-item navbars__item "><a href="" class="navbars__link">Góp ý</a></li>
+                        <li class="nav-item navbars__item "><a href="" class="navbars__link">Đánh giá</a></li>
+                        <li class="nav-item navbars__item "><a href="" class="navbars__link">Hỗ trợ</a></li>
                     </ul>
                 </div>
                 <div class="col-5 navbars__search">
                     <i class="fa-solid fa-magnifying-glass search__icon"></i>
                     <input type="text" class="search__input" placeholder="Nhập để tìm kiếm">
                 </div>
-                
                     <?php
-                        if(isset($_SESSION['name']))
+                        if(isset($_SESSION['logged_in']))
                         {
                             echo '<div class="col-3 navbars__login d-flex justify-content-end">';
                             echo'<div class="navbars__button__hello me-3">
@@ -47,7 +46,7 @@
                                         '</button>'.
                                         '<div class="dropdown-content">
                                             <a href="profile.php?user_name='.$_SESSION['name'].'">Thông tin người dùng</a>
-                                            <a href="mycourse.php">Khóa học của tôi</a>
+                                            <!--<a href="mycourse.php">Khóa học của tôi</a>-->
                                             <a href="logout.php">Đăng xuất</a>
                                         </div>'.
                                     '</div>'.
