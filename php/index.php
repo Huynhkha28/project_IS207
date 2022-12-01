@@ -9,7 +9,7 @@
             <div class="col-1 content__sibebar">
                 <div class="sidebar">
                     <ul class="sidebar__list">
-                        <li class="sidebar__item"><a href="../html/pathway.html" class="sidebar__link"><i class="fa-solid fa-route sidebar__icon"></i><span class="sidebar__title">Lộ trình</span></a></li>
+                        <li class="sidebar__item"><a href="./pathway.php" class="sidebar__link"><i class="fa-solid fa-route sidebar__icon"></i><span class="sidebar__title">Lộ trình</span></a></li>
                         <li class="sidebar__item"><a href="./course.php" class="sidebar__link"><i class="fa-solid fa-book sidebar__icon"></i><span class="sidebar__title">Khóa học</span></a></li>
                         <li class="sidebar__item"><a href="./blog.php" class="sidebar__link"><i class="fa-solid fa-blog sidebar__icon"></i><span class="sidebar__title">Blog</span></a></li>
                     </ul>
@@ -28,6 +28,7 @@
                         <h3>Front-end</h3>
                     <?php
                         require '../inc/truyvan.php';
+
                         if($resultFrontend->num_rows>0)
                             {
                                 while($row=$resultFrontend->fetch_assoc())
@@ -74,12 +75,12 @@
                                                 }
                                             ?>
                                         </div>
-                                        <?php
-                                    }
-                            }
-                        ?>
-                </div>
-                <div class="row mt-5">
+                                                                        <?php
+                                                                    }
+                                                        }
+                                            ?>
+                    </div>
+                    <div class="row mt-5">
                         <h3>Back-end</h3>
                         <?php
                         require '../inc/truyvan.php';

@@ -1,0 +1,105 @@
+.content{
+    height: fit-content;
+}
+
+.content__container{
+    /* background-color: #EBDFE8; */
+}
+
+.content__introduce{
+    width: 700px;
+    font-size: 15px;
+    float: left;
+    border: solid 1px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+
+.title{
+    font-size: 40px;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    /* text-fill-color: transparent; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    text-align: center;
+    
+}
+
+.background_color{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    /* height: 100vh; */
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.content__htmlcss{
+    width: 700px;
+    float: right;
+    margin: 10px;
+    border: solid 1px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.content__js {
+    width: 700px;
+    float: left;
+    margin: 10px;
+    border: solid 1px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.content__reactjs {
+    width: 700px;
+    float: right;
+    margin: 10px;
+    border: solid 1px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.pathway__img {
+    height: 150px;
+    width: 300px;
+    background-size: cover;
+    border-radius: 22px;
+    cursor: pointer;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+
+
+.gradient_color {
+    background: rgb(219,218,235);
+    background: linear-gradient(90deg, rgba(219,218,235,1) 0%, rgba(186,186,219,1) 35%, rgba(0,212,255,1) 100%);
+}
