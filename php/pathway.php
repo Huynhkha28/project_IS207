@@ -24,7 +24,7 @@
                     <div class="pathway__introduce">
                     </div>
 
-                    <div class="pathway__content" style="padding-bottom: 10px">
+                    <div class="pathway__content" style="padding-bottom: 10px; margin-left: 75px">
                         <div class="front_end__pathway">
                             <div class="p__pathway">
                                 <h2>Lộ trình học Front-end</h2>
@@ -32,18 +32,18 @@
                             </div>
 
                             <div>
-                                <a class="btn__pathway" href="./frontendpathway.php">Xem chi tiết</a>
+                                <a class="course__link__button course__button" href="./frontendpathway.php">Xem chi tiết</a>
                             </div>
                         </div>
 
-                        <div class="back_end__pathway">
+                        <div class="back_end__pathway border">
                             <div class="p__pathway">
                                 <h2>Lộ trình học Back-end</h2>
                                 <p>Trái với Front-end thì lập trình viên Back-end là người làm việc với dữ liệu, công việc thường nặng tính logic hơn. Chúng ta sẽ cùng tìm hiểu thêm về lộ trình học Back-end.</p>
                             </div>
 
                             <div>
-                                <a class="btn__pathway" href="./backendpathway.php">Xem chi tiết</a>
+                                <a class="course__link__button course__button" href="./backendpathway.php">Xem chi tiết</a>
                             </div>
                             
                         </div>
