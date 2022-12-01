@@ -65,7 +65,7 @@
                                                     }
                                                     else{
                                                         echo '<div class="course__price"><span>' .$row['course_price']. 'VNĐ</span></div>';
-                                                        echo '<div class="course__button"><a class="course__link__button" href="product_details.php?id='.$row['course_id'].'">Xem chi tiết</a></div>';
+                                                        echo '<div class="course__button"><a class="course__link__button" href="productdetails.php?id='.$row['course_id'].'">Xem chi tiết</a></div>';
                                                     }                                           
                                                 }
                                             ?>

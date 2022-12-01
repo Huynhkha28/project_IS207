@@ -23,6 +23,10 @@
     $sql_GetCourse= "SELECT c.course_id, c.course_name, cv.video_link, cv.video_name, cv.video_time, cv.video_id FROM `courses` AS c JOIN `course_video` AS cv ON c.course_id=cv.course_id WHERE c.course_id= $course_id and cv.video_id= $videoid
     ";
     $resultGetCourse = $conn->query($sql_GetCourse);
+    if($resultGetCourse==null)
+    {
+        header("Location: index.php");
+    }
     $course_name = $resultGetCourse->fetch_assoc();
 ?>
     <section class="content mb-5">

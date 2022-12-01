@@ -1,66 +1,11 @@
 <?php
-	session_start();
+
+    $title = "Chi tiết khóa học";
+    $css_link = "details.css";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/base.css">
-    <link rel="stylesheet" href="../assets/css/details.css">
-    <link rel="stylesheet" href="../assets/font/fontawesome-free-6.1.2-web/css/all.min.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js">
-    <script src="../../js/index.js"></script>
-    <title>Chi tiết khóa học</title>
-</head>
-<body>
-    <div class="app">
-        <header class="header">
-            <nav class="row header__navbars">
-                <div class="col-4 navbar-expand-sm navbars__menu">
-                    <ul class="navbars__list">
-                        <li class="nav-item navbars__item"><a href="../php/index.php" class="navbars__link">Trang chủ</a></li>
-                        <li class="nav-item navbars__item"><a href="" class="navbars__link">Góp ý</a></li>
-                        <li class="nav-item navbars__item"><a href="" class="navbars__link">Đánh giá</a></li>
-                        <li class="nav-item navbars__item"><a href="" class="navbars__link">Hỗ trợ</a></li>
-                    </ul>
-                </div>
-                <div class="col-5 navbars__search">
-                    <i class="fa-solid fa-magnifying-glass search__icon"></i>
-                    <input type="text" class="search__input" placeholder="Nhập để tìm kiếm">
-                </div>
-                <?php
-                        if(isset($_SESSION['name']))
-                        {
-                            echo '<div class="col-3 navbars__login d-flex justify-content-end">';
-                            echo'<div class="navbars__button__hello me-3">
-                                    <span class="me-2">Xin chào</span>
-                                    <div class="dropdown">
-                                        <button class="dropbtn">
-                                            <b>' . $_SESSION['name'] . '</b>'.
-                                            '<i class="fa-sharp fa-solid fa-user ms-2"></i>'.
-                                        '</button>'.
-                                        '<div class="dropdown-content">
-                                            <a href="profile.php?user_name='.$_SESSION['name'].'">Thông tin người dùng</a>
-                                            <!--<a href="mycourse.php">Khóa học của tôi</a>-->
-                                            <a href="logout.php">Đăng xuất</a>
-                                        </div>'.
-                                    '</div>'.
-                                '</div>';
-							//echo '<div class="navbars__button__dx"><a href="logout.php" class="navbars__button__dx__link">Đăng xuất!</a></div>';
-                        }
-                        else{
-                            echo '<div class="col-3 navbars__login d-flex justify-content-end">';
-                            printf('<button class="btn navbars__button--dk me-3" id="sign-up-btn" onclick="signUp()"><p class="navbars__button__hover--dk">Đăng ký</p></button>
-                            <button class="btn btn-secondary navbars__button--dn" id="sign-in-btn"  onclick="signIn()" ><p class="navbars__button__hover--dn">Đăng nhập</p></button>'); 
-                        }
-                    ?>
-                </div>
-            </nav>
-        </header>
+<?php
+    include "header.php";
+?>
         <section class="content">
             <div class="col-1 content__sibebar">
                 <div class="sidebar">
@@ -140,13 +85,13 @@
                     <div class="interface__price d-flex justify-content-center mt-3">
                         <h3><?php echo $row['course_price']?> VNĐ</h3>
                     </div>
-                    <div class="d-flex justify-content-center mt-2"><button class="interface__button"> Đăng ký mua ngay</button></div>                    
+                    <div class="d-flex justify-content-center mt-2"><a href="payment.php?id=<?php echo $id?>" class="interface__button" >Đăng ký mua ngay</a></div>                    
                 </div>
                 <div class="course__recommend mt-3">
                         <span class="describe__title">Những khóa học khác</span>
                         <div class="row">
                         <?php
-                             $sql_remaining = "SELECT course_id, course_name, course_price, course_image, course_type FROM `courses` WHERE course_id NOT IN (SELECT course_id FROM `courses` WHERE course_id = $id)";       
+                             $sql_remaining = "SELECT course_id, course_name, course_price, course_image FROM `courses`  WHERE course_id NOT IN (SELECT course_id FROM `courses` WHERE course_id = $id)";       
                             $resultRemaining =  $conn->query($sql_remaining);
                             if($resultRemaining->num_rows>0)
                             {
@@ -157,7 +102,7 @@
                                             <div class="course__img" style = "background-image: url(../assets/img/<?php echo $row_Remaining['course_image']?>);"></div>
                                             <div class="course__name"><span><?php echo $row_Remaining['course_name']?></span></div>
                                             <div class="course__price"><span><?php echo $row_Remaining['course_price']?> VNĐ</span></div>
-                                            <div class="course__button"><a class="course__link__button" href="product_details.php?id=<?php echo $row_Remaining['course_id']?>">Xem chi tiết</a></div>
+                                            <div class="course__button"><a class="course__link__button" href="productdetails.php?id=<?php echo $row_Remaining['course_id']?>">Xem chi tiết</a></div>
                                 </div>         
         <?php
     }
