@@ -1,0 +1,61 @@
+.content{
+    height: fit-content;
+}
+
+.content__container{
+    /* background-color: #EBDFE8; */
+}
+
+.content__introduce{
+    width: 700px;
+    font-size: 15px;
+    float: left;
+    border: solid 1px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.content__htmlcss{
+    width: 700px;
+    float: right;
+    margin: 10px;
+    border: solid 1px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.content__js {
+    width: 700px;
+    float: left;
+    margin: 10px;
+    border: solid 1px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.content__reactjs {
+    width: 700px;
+    float: right;
+    margin: 10px;
+    border: solid 1px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.pathway__img {
+    height: 150px;
+    width: 300px;
+    background-size: cover;
+    border-radius: 22px;
+    cursor: pointer;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+
+
+.gradient_color {
+    background: rgb(219,218,235);
+    background: linear-gradient(90deg, rgba(219,218,235,1) 0%, rgba(186,186,219,1) 35%, rgba(0,212,255,1) 100%);
+}

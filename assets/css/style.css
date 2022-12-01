@@ -274,7 +274,7 @@
     text-align: center;
     height: 30em;
     width: 100%;
-    background: url("/assets/img/Pathway.png") no-repeat;
+    background: url("../img/Pathway.png") no-repeat;
     background-size: cover;
 }
 
@@ -388,7 +388,7 @@
 }
 .course__button{
     padding:10px;
-display: flex;
+    display: flex;
     justify-content: center;
 }
 .course__link__button{
