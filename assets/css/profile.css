@@ -1,8 +1,8 @@
 .content__profile{
-    height: 500px;
+    height: auto;
 }
 .content{
-    height: 900px;
+    height: fit-content;
 }
 .profile__container{
     height: 350px;

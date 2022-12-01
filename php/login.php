@@ -31,6 +31,7 @@ session_start();
         {
             while($row = $result->fetch_assoc())
             {
+                $_SESSION['userid'] =$row['user_id'];
                 $_SESSION['name'] = $name;
                 $_SESSION['email'] = $row['user_email'];
                 $_SESSION['logged_in'] = true;
@@ -41,11 +42,6 @@ session_start();
         else{
             $kq = "Thông tin không đúng vui lòng kiểm tra lại";
         }
-        if(isset($_POST['remember']) && $_POST['remember'])
-            {
-                setcookie("name",$name,time()+(86400*7));
-                setcookie("mk",$mk,time()+(86400*7));
-            }
     }
     ?>
     <div class="container flex">
@@ -90,7 +86,7 @@ session_start();
         </div>
         <div class="w-50 text-md-right ms-5 ">
         <a href="#" class="text-decoration-none link-dark hover ">Quên mật khẩu</a>
-        <P style="color:red"><?php echo $kq; ?></p>
+        <P style="color:green"><?php echo $kq; ?></p>
         </div>
         </div>
         </form>
