@@ -21,21 +21,13 @@ $sql_post = mysqli_query($conn, "SELECT*FROM tbl_blog ORDER BY post_id DESC LIMI
 ?>
 <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 <script>
-<<<<<<< Updated upstream
-    $(document).ready(function () {
-     $(".Post_item_info_title").click(function() {
-    $(this).parent().toggleClass('active');
-    $(this).parent().children('.Post_item_info_body').slideToggle();
-  });
-});
-=======
+
     $(document).ready(function() {
         $(".Post_item_info_title").click(function() {
             $(this).parent().toggleClass('active');
             $(this).parent().children('.Post_item_info_body').slideToggle();
         });
     });
->>>>>>> Stashed changes
 </script>
 <section class="content">
     <div class="col-1 content__sibebar">
@@ -95,11 +87,7 @@ $sql_post = mysqli_query($conn, "SELECT*FROM tbl_blog ORDER BY post_id DESC LIMI
                         </div>
                     </div>
                     <div class="Post_item_info_image">
-<<<<<<< Updated upstream
-                        <img src="../assets/img/react_logo.png" alt="">
-=======
                         <img src="../assets/img/blog_post_1.jpg" alt="">
->>>>>>> Stashed changes
                     </div>
                 </div>
             </div>
