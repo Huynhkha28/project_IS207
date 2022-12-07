@@ -20,13 +20,13 @@
 <body>
     <div class="app">
         <header class="header">
-            <nav class="row header__navbars">
+            <nav class="d-flex header__navbars">
                 <div class="col-4 navbar-expand-sm navbars__menu">
                     <ul class="navbars__list">
                         <li class="nav-item navbars__item "><a href="../php/index.php" class="navbars__link">Trang chủ</a></li>
                         <li class="nav-item navbars__item "><a href="" class="navbars__link">Góp ý</a></li>
                         <li class="nav-item navbars__item "><a href="" class="navbars__link">Đánh giá</a></li>
-                        <li class="nav-item navbars__item "><a href="" class="navbars__link">Hỗ trợ</a></li>
+                        <li class="nav-item navbars__item "><a href="../php/support.php" class="navbars__link">Hỗ trợ</a></li>
                     </ul>
                 </div>
                 <div class="col-5 navbars__search">
