@@ -53,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="learn__course__list col-4 mt-3 ps-2">
+                <div class="learn__course__list col-4 mt-3">
                     <div class="learn__title d-flex justify-content-center mb-3">
                         <h2>Danh sách bài học</h2>
                     </div>
