@@ -75,13 +75,15 @@
                                                 }
                                             ?>
                                         </div>
-                                                                        <?php
-                                                                    }
-                                                        }
-                                            ?>
-                    </div>
-                    <div class="row mt-5">
-                        <h3>Back-end</h3>
+                                        <?php
+                                    }
+                            }
+                        ?>
+                </div>
+                
+                <div class="row mt-5">
+                <h3>Back-end</h3>
+                        
                         <?php
                         require '../inc/truyvan.php';
                         if($resultBackend->num_rows>0)

@@ -34,7 +34,7 @@ session_start();
                 $_SESSION['userid'] =$row['user_id'];
                 $_SESSION['name'] = $name;
                 $_SESSION['email'] = $row['user_email'];
-                $_SESSION['logged_in'] = true;
+                $_SESSION['logged_in']=1;
                 header('Location: index.php');
                 $row = $result->fetch_assoc(); 
             }
@@ -65,7 +65,7 @@ session_start();
                             <h3 class="mb-4 ">Đăng nhập</h3>
                         </div>
                     </div>
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" class="signin-form" method="POST">
+        <form action="login.php" class="signin-form" method="POST">
         <div class="form-group mb-3">
         <label class="label" for="name">Tên đăng nhập</label>
         <input type="text" name="name"class="form-control " required="">
