@@ -80,7 +80,6 @@ if(isset($_POST['dangky']))
         </div>
         <div class="form-group d-md-flex">
         <div class="w-100 text-md-right ">
-        <a href="#" class="text-decoration-none link-dark hover">Quên mật khẩu</a>
         <P style="color:green"><?php echo $kqdk; ?></p>
         </div>
         </div>
