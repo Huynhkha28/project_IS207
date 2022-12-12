@@ -3,6 +3,7 @@
 }
 .content{
     height: fit-content;
+    min-height: 530px;
 }
 .profile__container{
     height: 350px;
@@ -10,13 +11,14 @@
 .btn__change {
     align-items: center;
 }
-.btn__change a{
+
+.btn__change button{
     padding: 5px;
     border: 1px solid #000;
     border-radius: 10px;
    
 }
-.btn__change a:hover{
+.btn__change button:hover{
     color: aliceblue;
     background-color: #000;
     cursor: pointer;
@@ -52,10 +54,9 @@
 .modal__content{
     background-color: #fff;
     width: 700px;
-
-    height: 250px;
     position: relative;
     border-radius: 10px;
+    height: 175px;
 }
 .modal__title h2{
     position: relative;
@@ -81,7 +82,7 @@
     cursor: pointer;
     position: relative;
     left: 40%;
-    top: 18%;
+    top: 5%;
   }
   
   .cta span {
