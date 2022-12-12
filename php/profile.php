@@ -96,13 +96,6 @@
                     </div>
                     <div class="profile__container d-flex ">
                         <div class="profile__avatar col-3 ">
-                            <!-- <div class="avatar__img mb-3">
-                                <img src="" alt="" class="img__link">
-                            </div>
-                            <div class="btn__change avatar__btn">
-                                <a >Thêm ảnh <i class="fa-solid fa-camera"></i></a>
-                            </div> -->
- 
                         </div>
                         <div class="profile__info col-7">
                         <div class="info__account d-flex mt-4">
@@ -116,9 +109,6 @@
                                 <div class="btn__change  col-3 d-flex justify-content-end">
                                     <button value="Fullname">Thay đổi <i class="fa-solid fa-arrow-right-arrow-left"></i></button>
                                 </div>
-                                <!-- <div class="btn__change  col-3 d-flex justify-content-start ms-2">
-                                    <button id="js-buy-ticket">Thêm <i class="fa-solid fa-plus"></i></button>
-                                </div> -->
                             </div>
                             <div class="info__name d-flex mt-4 justify-content-between">
                                     <div class="info__title col-2"><i class="fa-solid fa-envelope"></i> Email:</div>

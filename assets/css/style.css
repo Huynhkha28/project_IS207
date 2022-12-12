@@ -59,9 +59,8 @@
     height: 20px;
 }
 /*HEADER-SEARCH*/
-.navbars__search{
-    display: flex;
-    width: 200px;
+.navbars__search img{
+    border-radius: 30px;
 }
 .search__icon{
     position: relative;
@@ -452,4 +451,7 @@
 .footer__button__link{
     text-decoration: none;
     color:#fff;
+}
+.row{
+    margin: 0;
 }
