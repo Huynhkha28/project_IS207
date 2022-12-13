@@ -58,6 +58,12 @@
     border-radius: 10px;
     height: 175px;
 }
+.modal__title{
+    display: flex;
+}
+.close:hover{
+    cursor: pointer;
+}
 .modal__title h2{
     position: relative;
     left: 35%;
