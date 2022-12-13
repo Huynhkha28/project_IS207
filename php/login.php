@@ -66,22 +66,24 @@ session_start();
                         <form action="login.php" class="signin-form" method="POST">
                             <div class="form-group mb-3">
                                 <label class="label" for="name">Tên đăng nhập</label>
-                                <input type="text" name="name" class="form-control " required="">
+                                  <input type="text" name="name"class="form-control " required="">
                             </div>
                             <div class="form-group mb-3">
                                 <label class="label" for="password">Mật khẩu</label>
-                                <input type="password" name="mk" class="form-control" required="">
+                                <input type="password" name="mk" class="form-control"  required="">
                             </div>
                             <div class="form-group">
                                 <button type="submit" name="dangnhap" class="form-control btn btn-dark submit px-1">Đăng nhập</button>
                             </div>
                             <div class="form-group d-md-flex">
                                 <div class="w-50 text-left">
+                                    <label class="checkbox-wrap checkbox-primary mb-0">Ghi nhớ tài khoản
+                                    <input type="checkbox" name="remember">
                                     <span class="checkmark"></span>
-                                    </label>
+                                </label>
                                 </div>
                                 <div class="w-50 text-md-right ms-5 ">
-                                    <a href="#" class="text-decoration-none link-dark hover ">Quên mật khẩu</a>
+                                    <a href="./forgetpassword.php" class="text-decoration-none link-dark hover ">Quên mật khẩu</a>
                                     <P style="color:green"><?php echo $kq; ?></p>
                                 </div>
                             </div>

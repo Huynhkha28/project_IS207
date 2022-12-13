@@ -65,8 +65,8 @@
             str="<div class='modal__item d-flex mt-3 ms-3'>";
             if(label == "Password")
             {
-                str += "<label for='' class='modal__label col-3'>"+ "Old Password" +":</label><input type='text' class='col-6 modal__input' name = 'oldpassword'></div>";
-                str += "<div class='modal__item d-flex mt-3 ms-3'><label for='' class='modal__label col-3'>"+ "New Password" +":</label><input type='text' class='col-6 modal__input' name = 'newpassword'></div>";
+                str += "<label for='' class='modal__label col-3'>"+ "Old Password" +":</label><input type='password' class='col-6 modal__input' name = 'oldpassword'></div>";
+                str += "<div class='modal__item d-flex mt-3 ms-3'><label for='' class='modal__label col-3'>"+ "New Password" +":</label><input type='password' class='col-6 modal__input' name = 'newpassword'></div>";
             }
             else{
                 str += "<label for='' class='modal__label col-3'>"+ label +":</label><input type='text' class='col-6 modal__input' name='"+label+"'></div>";
@@ -186,34 +186,6 @@
                         </div>                
         </div>
 </section>
-<!-- <div  class="form__modal__add" id="form-modal-add">
-    <form class="modal__content" action="profile.php?user_name=<?php echo $user_name?>" method="POST">
-        <div class="modal__title">
-            <h2>Thêm thông tin</h2>
-            <button class="modal-close">
-                <i class="fa-regular fa-rectangle-xmark"></i>
-            </button>
-        </div>
-        <div class="modal__item d-flex mt-3 ms-3">
-            <label for="" class="modal__label col-3">Họ và tên:</label>
-            <input type="text" class="col-6 modal__input">
-        </div>
-        <div class="modal__item d-flex mt-3 ms-3">
-            <label for="" class="modal__label col-3">Địa chỉ:</label>
-            <input type="text" class="col-6 modal__input">
-        </div>
-        <div class="modal__item d-flex mt-3 ms-3">
-            <label for="" class="modal__label col-3">Số điện thoại:</label>
-            <input type="text" class="col-6 modal__input">
-        </div>
-        <button class="cta">
-            <span class="hover-underline-animation"> Cập nhật </span>
-            <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
-                <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
-            </svg>
-        </button>
-    </form>
-</div> -->
 <div class="form__modal__add">
     <form class="modal__content" action="profile.php?user_name=<?php echo $user_name?>" method="POST">
         <div class="modal__title">
