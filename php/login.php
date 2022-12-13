@@ -4,6 +4,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,31 +16,28 @@ session_start();
     <link rel="stylesheet" href="../assets/css/login.css">
     <title>Đăng nhập tài khoản</title>
 </head>
+
 <body>
     <?php
-    $name ="";
+    $name = "";
     $mk = "";
     $kq = "";
-    if(isset($_POST['dangnhap']))
-    {
+    if (isset($_POST['dangnhap'])) {
         require "../inc/myconnect.php";
         $name = $_POST['name'];
         $mk = md5($_POST['mk']);
         $sql = "SELECT * FROM `users` WHERE `user_name` = '$name' and `user_password` = '$mk'";
         $result = $conn->query($sql);
-        if($result->num_rows> 0)
-        {
-            while($row = $result->fetch_assoc())
-            {
-                $_SESSION['userid'] =$row['user_id'];
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $_SESSION['userid'] = $row['user_id'];
                 $_SESSION['name'] = $name;
                 $_SESSION['email'] = $row['user_email'];
-                $_SESSION['logged_in']=1;
+                $_SESSION['logged_in'] = 1;
                 header('Location: index.php');
-                $row = $result->fetch_assoc(); 
+                $row = $result->fetch_assoc();
             }
-        }
-        else{
+        } else {
             $kq = "Thông tin không đúng vui lòng kiểm tra lại";
         }
     }
@@ -68,11 +66,11 @@ session_start();
                         <form action="login.php" class="signin-form" method="POST">
                             <div class="form-group mb-3">
                                 <label class="label" for="name">Tên đăng nhập</label>
-                                <input type="text" name="name"class="form-control " required="">
+                                  <input type="text" name="name"class="form-control " required="">
                             </div>
                             <div class="form-group mb-3">
                                 <label class="label" for="password">Mật khẩu</label>
-                                <input type="password" name="mk"class="form-control"  required="">
+                                <input type="password" name="mk" class="form-control"  required="">
                             </div>
                             <div class="form-group">
                                 <button type="submit" name="dangnhap" class="form-control btn btn-dark submit px-1">Đăng nhập</button>
