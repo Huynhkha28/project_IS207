@@ -18,9 +18,9 @@ $kq='';
             $sqlGetUserId= "SELECT `user_id` from `users` where `user_name` = '$_SESSION[name]'";
             $resultGetUserId = $conn->query($sqlGetUserId);
             $userID=$resultGetUserId->fetch_array();
-            $sqlInsertSupport= "INSERT INTO `support` (`support_name`, `support_content`, `user_id`) VALUES ('$supportName', '$supportContent', '$userID[user_id]');";
+            $sqlInsertSupport= "INSERT INTO `support` (`supportName`, `supportContent`, `user_id`) VALUES ('$supportName ', '$supportContent', '$userID[user_id]');";
             if($conn->query($sqlInsertSupport)===true){
-                $kq="Bạn đã thêm hỗ trợ thành công";
+                $kq="Bạn đã gửi hỗ trợ thành công";
             }
         }
 
