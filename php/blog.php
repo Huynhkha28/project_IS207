@@ -87,7 +87,7 @@ $sql_post = mysqli_query($conn, "SELECT*FROM tbl_blog ORDER BY post_id DESC LIMI
                         </div>
                     </div>
                     <div class="Post_item_info_image">
-                        <img src="../assets/img/blog_post_1.jpg" alt="">
+                        <img src="../assets/img/<?php echo $row['post_image'] ?>" alt="">
                     </div>
                 </div>
             </div>
