@@ -371,11 +371,13 @@
 }
 .course__img
 {
-    padding-top: 57%;
+    padding-top: 56%;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     border-radius: 22px;
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
 }
 
 .course__name{

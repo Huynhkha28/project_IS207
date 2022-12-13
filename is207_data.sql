@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 01, 2022 at 11:54 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th12 10, 2022 lúc 07:37 AM
+-- Phiên bản máy phục vụ: 10.4.25-MariaDB
+-- Phiên bản PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,22 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `is207`
+-- Cơ sở dữ liệu: `is207`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `category`
---
-
-CREATE TABLE `category` (
-  `category_id` int(11) NOT NULL,
-  `category_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `category`
+-- Đang đổ dữ liệu cho bảng `category`
 --
 
 INSERT INTO `category` (`category_id`, `category_name`) VALUES
@@ -45,7 +36,7 @@ INSERT INTO `category` (`category_id`, `category_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `courses`
+-- Cấu trúc bảng cho bảng `courses`
 --
 
 CREATE TABLE `courses` (
@@ -58,7 +49,7 @@ CREATE TABLE `courses` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `courses`
+-- Đang đổ dữ liệu cho bảng `courses`
 --
 
 INSERT INTO `courses` (`course_id`, `course_name`, `course_describe`, `course_price`, `course_image`, `course_type`) VALUES
@@ -71,7 +62,7 @@ INSERT INTO `courses` (`course_id`, `course_name`, `course_describe`, `course_pr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `course_summary`
+-- Cấu trúc bảng cho bảng `course_summary`
 --
 
 CREATE TABLE `course_summary` (
@@ -81,7 +72,7 @@ CREATE TABLE `course_summary` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `course_summary`
+-- Đang đổ dữ liệu cho bảng `course_summary`
 --
 
 INSERT INTO `course_summary` (`summary_id`, `course_id`, `summary`) VALUES
@@ -109,7 +100,7 @@ INSERT INTO `course_summary` (`summary_id`, `course_id`, `summary`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `course_video`
+-- Cấu trúc bảng cho bảng `course_video`
 --
 
 CREATE TABLE `course_video` (
@@ -121,7 +112,7 @@ CREATE TABLE `course_video` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `course_video`
+-- Đang đổ dữ liệu cho bảng `course_video`
 --
 
 INSERT INTO `course_video` (`video_id`, `course_id`, `video_name`, `video_link`, `video_time`) VALUES
@@ -261,7 +252,7 @@ INSERT INTO `course_video` (`video_id`, `course_id`, `video_name`, `video_link`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `payment_bill`
+-- Cấu trúc bảng cho bảng `payment_bill`
 --
 
 CREATE TABLE `payment_bill` (
@@ -274,7 +265,7 @@ CREATE TABLE `payment_bill` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `purchased_course`
+-- Cấu trúc bảng cho bảng `purchased_course`
 --
 
 CREATE TABLE `purchased_course` (
@@ -284,7 +275,7 @@ CREATE TABLE `purchased_course` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `purchased_course`
+-- Đang đổ dữ liệu cho bảng `purchased_course`
 --
 
 INSERT INTO `purchased_course` (`user_id`, `course_id`, `user_name`) VALUES
@@ -305,7 +296,63 @@ INSERT INTO `purchased_course` (`user_id`, `course_id`, `user_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `support`
+--
+-- Cấu trúc bảng cho bảng `tbl_blog`
+--
+
+CREATE TABLE `tbl_blog` (
+  `post_id` int(11) NOT NULL,
+  `post_name` text NOT NULL,
+  `post_mota` text NOT NULL,
+  `post_tags` varchar(50) NOT NULL,
+  `post_image` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_blog`
+--
+
+INSERT INTO `tbl_blog` (`post_id`, `post_name`, `post_mota`, `post_tags`, `post_image`) VALUES
+(1, 'Cách sử dụng font-end hiểu quả nhất 2', '                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ducimus voluptatibus eaque voluptatem porro, amet perspiciatis facilis excepturi officiis asperiores! Quisquam quos voluptatibus, ipsa nihil fugit maxime nesciunt animi veritatis dolorem facilis voluptatem eum totam. Voluptatibus dolores nobis eum dolorem tempore facere obcaecati molestiae magnam eius quasi quas mollitia corporis commodi molestias voluptatum dolorum deserunt fuga a animi deleniti, enim delectus quam aliquid officiis! Ex, rerum nisi veritatis incidunt a vero minima quibusdam sit ducimus error architecto ullam quis hic distinctio, exercitationem facilis magni quae accusamus voluptatibus. Facere repellendus fuga dolorem, pariatur iure quidem omnis dicta atque possimus necessitatibus temporibus suscipit officiis aliquam, animi et unde aspernatur, aut autem magni repudiandae inventore mollitia. Modi, praesentium. Sit laboriosam ducimus suscipit praesentium corporis pariatur, odit voluptatum blanditiis id excepturi repudiandae officia nulla, ipsam harum est minima laudantium? Modi tempora corrupti odio ratione debitis distinctio numquam quaerat iusto. Cum molestiae maiores debitis suscipit vel esse odio, harum, eveniet at odit facilis reiciendis soluta ex, necessitatibus sequi! Maiores, nostrum id quos magnam laudantium natus molestiae porro! Ut mollitia reiciendis perferendis enim cumque reprehenderit sequi maiores veniam omnis incidunt distinctio, fuga veritatis voluptates doloremque et aspernatur, deserunt voluptatum officiis adipisci animi autem quia, doloribus dicta.\r\n', 'back-end', 'blog_post_1.jpg'),
+(2, 'Cách sử dụng font-end hiểu quả nhất 3', '                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat expedita nostrum magnam, eligendi voluptas, culpa ducimus odio laboriosam qui rerum dicta voluptate temporibus mollitia totam natus minima assumenda, aut quasi blanditiis! Esse, id sed ipsam quibusdam, et quisquam quasi possimus saepe libero laboriosam minus nostrum repudiandae ex consequuntur cum. Corporis.          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ducimus voluptatibus eaque voluptatem porro, amet perspiciatis facilis excepturi officiis asperiores! Quisquam quos voluptatibus, ipsa nihil fugit maxime nesciunt animi veritatis dolorem facilis voluptatem eum totam. Voluptatibus dolores nobis eum dolorem tempore facere obcaecati molestiae magnam eius quasi quas mollitia corporis commodi molestias voluptatum dolorum deserunt fuga a animi deleniti, enim delectus quam aliquid officiis! Ex, rerum nisi veritatis incidunt a vero minima quibusdam sit ducimus error architecto ullam quis hic distinctio, exercitationem facilis magni quae accusamus voluptatibus. Facere repellendus fuga dolorem, pariatur iure quidem omnis dicta atque possimus necessitatibus temporibus suscipit officiis aliquam, animi et unde aspernatur, aut autem magni repudiandae inventore mollitia. Modi, praesentium. Sit laboriosam ducimus suscipit praesentium corporis pariatur, odit voluptatum blanditiis id excepturi repudiandae officia nulla, ipsam harum est minima laudantium? Modi tempora corrupti odio ratione debitis distinctio numquam quaerat iusto. Cum molestiae maiores debitis suscipit vel esse odio, harum, eveniet at odit facilis reiciendis soluta ex, necessitatibus sequi! Maiores, nostrum id quos magnam laudantium natus molestiae porro! Ut mollitia reiciendis perferendis enim cumque reprehenderit sequi maiores veniam omnis incidunt distinctio, fuga veritatis voluptates doloremque et aspernatur, deserunt voluptatum officiis adipisci animi autem quia, doloribus dicta.\n', 'font-end', 'blog_post_1.jpg'),
+(3, 'Cách sử dụng font-end hiểu quả nhất 2', '                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, necessitatibus eaque maiores accusantium, cumque laboriosam, non sint quis itaque enim quaerat veniam nulla. Nihil sed laboriosam excepturi obcaecati commodi culpa nam, numquam laborum quasi dicta cupiditate, itaque ex iusto accusantium harum illum magnam? Eius architecto tempore neque et officiis similique ab, vel ea nulla ipsam molestiae expedita aliquid cupiditate facere incidunt reprehenderit, quo libero aut perspiciatis necessitatibus dolor. Repellendus qui eveniet consectetur praesentium magni quam accusantium aspernatur? Illum quisquam accusamus animi possimus itaque eius libero. Impedit, doloribus ullam quia, eum expedita possimus deserunt totam quaerat dolorum commodi voluptatum natus eius minima vel eaque quo modi, perferendis fugiat quis illum accusantium? Facere nulla iste reiciendis vero est in accusantium vitae quisquam dicta dolorem quam delectus quasi deleniti doloremque id, quia excepturi quae nesciunt quos officia. Vitae dolorum totam optio architecto aliquam facilis, quod mollitia vel cum ad, repellendus cupiditate quasi sit est, unde vero voluptatibus. Laudantium fugiat a quia dignissimos optio, hic cum qui commodi sunt inventore nobis dolorum repudiandae magni alias aliquid nesciunt quos. Suscipit sunt ratione, laborum tenetur quaerat, praesentium ullam dolor libero unde dolore quis error. Aspernatur repudiandae nemo aut, natus ullam laborum quod magni omnis recusandae iusto.    \r\n', 'js', 'blog_post_1.jpg'),
+(4, 'Cách sử dụng font-end hiểu quả nhất 3', '                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat expedita nostrum magnam, eligendi voluptas, culpa ducimus odio laboriosam qui rerum dicta voluptate temporibus mollitia totam natus minima assumenda, aut quasi blanditiis! Esse, id sed ipsam quibusdam, et quisquam quasi possimus saepe libero laboriosam minus nostrum repudiandae ex consequuntur cum. Corporis.       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, necessitatibus eaque maiores accusantium, cumque laboriosam, non sint quis itaque enim quaerat veniam nulla. Nihil sed laboriosam excepturi obcaecati commodi culpa nam, numquam laborum quasi dicta cupiditate, itaque ex iusto accusantium harum illum magnam? Eius architecto tempore neque et officiis similique ab, vel ea nulla ipsam molestiae expedita aliquid cupiditate facere incidunt reprehenderit, quo libero aut perspiciatis necessitatibus dolor. Repellendus qui eveniet consectetur praesentium magni quam accusantium aspernatur? Illum quisquam accusamus animi possimus itaque eius libero. Impedit, doloribus ullam quia, eum expedita possimus deserunt totam quaerat dolorum commodi voluptatum natus eius minima vel eaque quo modi, perferendis fugiat quis illum accusantium? Facere nulla iste reiciendis vero est in accusantium vitae quisquam dicta dolorem quam delectus quasi deleniti doloremque id, quia excepturi quae nesciunt quos officia. Vitae dolorum totam optio architecto aliquam facilis, quod mollitia vel cum ad, repellendus cupiditate quasi sit est, unde vero voluptatibus. Laudantium fugiat a quia dignissimos optio, hic cum qui commodi sunt inventore nobis dolorum repudiandae magni alias aliquid nesciunt quos. Suscipit sunt ratione, laborum tenetur quaerat, praesentium ullam dolor libero unde dolore quis error. Aspernatur repudiandae nemo aut, natus ullam laborum quod magni omnis recusandae iusto.    \n', 'html', 'blog_post_1.jpg'),
+(5, 'Cách sử dụng font-end hiểu quả nhất 2', '                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, necessitatibus eaque maiores accusantium, cumque laboriosam, non sint quis itaque enim quaerat veniam nulla. Nihil sed laboriosam excepturi obcaecati commodi culpa nam, numquam laborum quasi dicta cupiditate, itaque ex iusto accusantium harum illum magnam? Eius architecto tempore neque et officiis similique ab, vel ea nulla ipsam molestiae expedita aliquid cupiditate facere incidunt reprehenderit, quo libero aut perspiciatis necessitatibus dolor. Repellendus qui eveniet consectetur praesentium magni quam accusantium aspernatur? Illum quisquam accusamus animi possimus itaque eius libero. Impedit, doloribus ullam quia, eum expedita possimus deserunt totam quaerat dolorum commodi voluptatum natus eius minima vel eaque quo modi, perferendis fugiat quis illum accusantium? Facere nulla iste reiciendis vero est in accusantium vitae quisquam dicta dolorem quam delectus quasi deleniti doloremque id, quia excepturi quae nesciunt quos officia. Vitae dolorum totam optio architecto aliquam facilis, quod mollitia vel cum ad, repellendus cupiditate quasi sit est, unde vero voluptatibus. Laudantium fugiat a quia dignissimos optio, hic cum qui commodi sunt inventore nobis dolorum repudiandae magni alias aliquid nesciunt quos. Suscipit sunt ratione, laborum tenetur quaerat, praesentium ullam dolor libero unde dolore quis error. Aspernatur repudiandae nemo aut, natus ullam laborum quod magni omnis recusandae iusto.    \r\n', 'css', 'blog_post_1.jpg'),
+(6, 'Cách sử dụng font-end hiểu quả nhất 3', '                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat expedita nostrum magnam, eligendi voluptas, culpa ducimus odio laboriosam qui rerum dicta voluptate temporibus mollitia totam natus minima assumenda, aut quasi blanditiis! Esse, id sed ipsam quibusdam, et quisquam quasi possimus saepe libero laboriosam minus nostrum repudiandae ex consequuntur cum. Corporis.       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, necessitatibus eaque maiores accusantium, cumque laboriosam, non sint quis itaque enim quaerat veniam nulla. Nihil sed laboriosam excepturi obcaecati commodi culpa nam, numquam laborum quasi dicta cupiditate, itaque ex iusto accusantium harum illum magnam? Eius architecto tempore neque et officiis similique ab, vel ea nulla ipsam molestiae expedita aliquid cupiditate facere incidunt reprehenderit, quo libero aut perspiciatis necessitatibus dolor. Repellendus qui eveniet consectetur praesentium magni quam accusantium aspernatur? Illum quisquam accusamus animi possimus itaque eius libero. Impedit, doloribus ullam quia, eum expedita possimus deserunt totam quaerat dolorum commodi voluptatum natus eius minima vel eaque quo modi, perferendis fugiat quis illum accusantium? Facere nulla iste reiciendis vero est in accusantium vitae quisquam dicta dolorem quam delectus quasi deleniti doloremque id, quia excepturi quae nesciunt quos officia. Vitae dolorum totam optio architecto aliquam facilis, quod mollitia vel cum ad, repellendus cupiditate quasi sit est, unde vero voluptatibus. Laudantium fugiat a quia dignissimos optio, hic cum qui commodi sunt inventore nobis dolorum repudiandae magni alias aliquid nesciunt quos. Suscipit sunt ratione, laborum tenetur quaerat, praesentium ullam dolor libero unde dolore quis error. Aspernatur repudiandae nemo aut, natus ullam laborum quod magni omnis recusandae iusto.    \r\n', 'js', 'blog_post_1.jpg'),
+(7, 'Cách sử dụng font-end hiểu quả nhất 2', '                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, necessitatibus eaque maiores accusantium, cumque laboriosam, non sint quis itaque enim quaerat veniam nulla. Nihil sed laboriosam excepturi obcaecati commodi culpa nam, numquam laborum quasi dicta cupiditate, itaque ex iusto accusantium harum illum magnam? Eius architecto tempore neque et officiis similique ab, vel ea nulla ipsam molestiae expedita aliquid cupiditate facere incidunt reprehenderit, quo libero aut perspiciatis necessitatibus dolor. Repellendus qui eveniet consectetur praesentium magni quam accusantium aspernatur? Illum quisquam accusamus animi possimus itaque eius libero. Impedit, doloribus ullam quia, eum expedita possimus deserunt totam quaerat dolorum commodi voluptatum natus eius minima vel eaque quo modi, perferendis fugiat quis illum accusantium? Facere nulla iste reiciendis vero est in accusantium vitae quisquam dicta dolorem quam delectus quasi deleniti doloremque id, quia excepturi quae nesciunt quos officia. Vitae dolorum totam optio architecto aliquam facilis, quod mollitia vel cum ad, repellendus cupiditate quasi sit est, unde vero voluptatibus. Laudantium fugiat a quia dignissimos optio, hic cum qui commodi sunt inventore nobis dolorum repudiandae magni alias aliquid nesciunt quos. Suscipit sunt ratione, laborum tenetur quaerat, praesentium ullam dolor libero unde dolore quis error. Aspernatur repudiandae nemo aut, natus ullam laborum quod magni omnis recusandae iusto.    \r\n', 'html', 'blog_post_1.jpg'),
+(8, 'Cách sử dụng font-end hiểu quả nhất 3', '                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat expedita nostrum magnam, eligendi voluptas, culpa ducimus odio laboriosam qui rerum dicta voluptate temporibus mollitia totam natus minima assumenda, aut quasi blanditiis! Esse, id sed ipsam quibusdam, et quisquam quasi possimus saepe libero laboriosam minus nostrum repudiandae ex consequuntur cum. Corporis.       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, necessitatibus eaque maiores accusantium, cumque laboriosam, non sint quis itaque enim quaerat veniam nulla. Nihil sed laboriosam excepturi obcaecati commodi culpa nam, numquam laborum quasi dicta cupiditate, itaque ex iusto accusantium harum illum magnam? Eius architecto tempore neque et officiis similique ab, vel ea nulla ipsam molestiae expedita aliquid cupiditate facere incidunt reprehenderit, quo libero aut perspiciatis necessitatibus dolor. Repellendus qui eveniet consectetur praesentium magni quam accusantium aspernatur? Illum quisquam accusamus animi possimus itaque eius libero. Impedit, doloribus ullam quia, eum expedita possimus deserunt totam quaerat dolorum commodi voluptatum natus eius minima vel eaque quo modi, perferendis fugiat quis illum accusantium? Facere nulla iste reiciendis vero est in accusantium vitae quisquam dicta dolorem quam delectus quasi deleniti doloremque id, quia excepturi quae nesciunt quos officia. Vitae dolorum totam optio architecto aliquam facilis, quod mollitia vel cum ad, repellendus cupiditate quasi sit est, unde vero voluptatibus. Laudantium fugiat a quia dignissimos optio, hic cum qui commodi sunt inventore nobis dolorum repudiandae magni alias aliquid nesciunt quos. Suscipit sunt ratione, laborum tenetur quaerat, praesentium ullam dolor libero unde dolore quis error. Aspernatur repudiandae nemo aut, natus ullam laborum quod magni omnis recusandae iusto.    \r\n', 'html', 'blog_post_1.jpg'),
+(9, 'Cách sử dụng font-end hiểu quả nhất 3', '                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat expedita nostrum magnam, eligendi voluptas, culpa ducimus odio laboriosam qui rerum dicta voluptate temporibus mollitia totam natus minima assumenda, aut quasi blanditiis! Esse, id sed ipsam quibusdam, et quisquam quasi possimus saepe libero laboriosam minus nostrum repudiandae ex consequuntur cum. Corporis.          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ducimus voluptatibus eaque voluptatem porro, amet perspiciatis facilis excepturi officiis asperiores! Quisquam quos voluptatibus, ipsa nihil fugit maxime nesciunt animi veritatis dolorem facilis voluptatem eum totam. Voluptatibus dolores nobis eum dolorem tempore facere obcaecati molestiae magnam eius quasi quas mollitia corporis commodi molestias voluptatum dolorum deserunt fuga a animi deleniti, enim delectus quam aliquid officiis! Ex, rerum nisi veritatis incidunt a vero minima quibusdam sit ducimus error architecto ullam quis hic distinctio, exercitationem facilis magni quae accusamus voluptatibus. Facere repellendus fuga dolorem, pariatur iure quidem omnis dicta atque possimus necessitatibus temporibus suscipit officiis aliquam, animi et unde aspernatur, aut autem magni repudiandae inventore mollitia. Modi, praesentium. Sit laboriosam ducimus suscipit praesentium corporis pariatur, odit voluptatum blanditiis id excepturi repudiandae officia nulla, ipsam harum est minima laudantium? Modi tempora corrupti odio ratione debitis distinctio numquam quaerat iusto. Cum molestiae maiores debitis suscipit vel esse odio, harum, eveniet at odit facilis reiciendis soluta ex, necessitatibus sequi! Maiores, nostrum id quos magnam laudantium natus molestiae porro! Ut mollitia reiciendis perferendis enim cumque reprehenderit sequi maiores veniam omnis incidunt distinctio, fuga veritatis voluptates doloremque et aspernatur, deserunt voluptatum officiis adipisci animi autem quia, doloribus dicta.\r\n', 'css', 'blog_post_1.jpg'),
+(10, 'Cách sử dụng font-end hiểu quả nhất 3', '                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat expedita nostrum magnam, eligendi voluptas, culpa ducimus odio laboriosam qui rerum dicta voluptate temporibus mollitia totam natus minima assumenda, aut quasi blanditiis! Esse, id sed ipsam quibusdam, et quisquam quasi possimus saepe libero laboriosam minus nostrum repudiandae ex consequuntur cum. Corporis.       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, necessitatibus eaque maiores accusantium, cumque laboriosam, non sint quis itaque enim quaerat veniam nulla. Nihil sed laboriosam excepturi obcaecati commodi culpa nam, numquam laborum quasi dicta cupiditate, itaque ex iusto accusantium harum illum magnam? Eius architecto tempore neque et officiis similique ab, vel ea nulla ipsam molestiae expedita aliquid cupiditate facere incidunt reprehenderit, quo libero aut perspiciatis necessitatibus dolor. Repellendus qui eveniet consectetur praesentium magni quam accusantium aspernatur? Illum quisquam accusamus animi possimus itaque eius libero. Impedit, doloribus ullam quia, eum expedita possimus deserunt totam quaerat dolorum commodi voluptatum natus eius minima vel eaque quo modi, perferendis fugiat quis illum accusantium? Facere nulla iste reiciendis vero est in accusantium vitae quisquam dicta dolorem quam delectus quasi deleniti doloremque id, quia excepturi quae nesciunt quos officia. Vitae dolorum totam optio architecto aliquam facilis, quod mollitia vel cum ad, repellendus cupiditate quasi sit est, unde vero voluptatibus. Laudantium fugiat a quia dignissimos optio, hic cum qui commodi sunt inventore nobis dolorum repudiandae magni alias aliquid nesciunt quos. Suscipit sunt ratione, laborum tenetur quaerat, praesentium ullam dolor libero unde dolore quis error. Aspernatur repudiandae nemo aut, natus ullam laborum quod magni omnis recusandae iusto.    \r\n', 'css', 'blog_post_1.jpg'),
+(11, 'Cách sử dụng font-end hiểu quả nhất 3', '                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat expedita nostrum magnam, eligendi voluptas, culpa ducimus odio laboriosam qui rerum dicta voluptate temporibus mollitia totam natus minima assumenda, aut quasi blanditiis! Esse, id sed ipsam quibusdam, et quisquam quasi possimus saepe libero laboriosam minus nostrum repudiandae ex consequuntur cum. Corporis.          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ducimus voluptatibus eaque voluptatem porro, amet perspiciatis facilis excepturi officiis asperiores! Quisquam quos voluptatibus, ipsa nihil fugit maxime nesciunt animi veritatis dolorem facilis voluptatem eum totam. Voluptatibus dolores nobis eum dolorem tempore facere obcaecati molestiae magnam eius quasi quas mollitia corporis commodi molestias voluptatum dolorum deserunt fuga a animi deleniti, enim delectus quam aliquid officiis! Ex, rerum nisi veritatis incidunt a vero minima quibusdam sit ducimus error architecto ullam quis hic distinctio, exercitationem facilis magni quae accusamus voluptatibus. Facere repellendus fuga dolorem, pariatur iure quidem omnis dicta atque possimus necessitatibus temporibus suscipit officiis aliquam, animi et unde aspernatur, aut autem magni repudiandae inventore mollitia. Modi, praesentium. Sit laboriosam ducimus suscipit praesentium corporis pariatur, odit voluptatum blanditiis id excepturi repudiandae officia nulla, ipsam harum est minima laudantium? Modi tempora corrupti odio ratione debitis distinctio numquam quaerat iusto. Cum molestiae maiores debitis suscipit vel esse odio, harum, eveniet at odit facilis reiciendis soluta ex, necessitatibus sequi! Maiores, nostrum id quos magnam laudantium natus molestiae porro! Ut mollitia reiciendis perferendis enim cumque reprehenderit sequi maiores veniam omnis incidunt distinctio, fuga veritatis voluptates doloremque et aspernatur, deserunt voluptatum officiis adipisci animi autem quia, doloribus dicta.\r\n', 'font-end', 'blog_post_1.jpg'),
+(12, 'Cách sử dụng font-end hiểu quả nhất 4', '                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat expedita nostrum magnam, eligendi voluptas, culpa ducimus odio laboriosam qui rerum dicta voluptate temporibus mollitia totam natus minima assumenda, aut quasi blanditiis! Esse, id sed ipsam quibusdam, et quisquam quasi possimus saepe libero laboriosam minus nostrum repudiandae ex consequuntur cum. Corporis.       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, necessitatibus eaque maiores accusantium, cumque laboriosam, non sint quis itaque enim quaerat veniam nulla. Nihil sed laboriosam excepturi obcaecati commodi culpa nam, numquam laborum quasi dicta cupiditate, itaque ex iusto accusantium harum illum magnam? Eius architecto tempore neque et officiis similique ab, vel ea nulla ipsam molestiae expedita aliquid cupiditate facere incidunt reprehenderit, quo libero aut perspiciatis necessitatibus dolor. Repellendus qui eveniet consectetur praesentium magni quam accusantium aspernatur? Illum quisquam accusamus animi possimus itaque eius libero. Impedit, doloribus ullam quia, eum expedita possimus deserunt totam quaerat dolorum commodi voluptatum natus eius minima vel eaque quo modi, perferendis fugiat quis illum accusantium? Facere nulla iste reiciendis vero est in accusantium vitae quisquam dicta dolorem quam delectus quasi deleniti doloremque id, quia excepturi quae nesciunt quos officia. Vitae dolorum totam optio architecto aliquam facilis, quod mollitia vel cum ad, repellendus cupiditate quasi sit est, unde vero voluptatibus. Laudantium fugiat a quia dignissimos optio, hic cum qui commodi sunt inventore nobis dolorum repudiandae magni alias aliquid nesciunt quos. Suscipit sunt ratione, laborum tenetur quaerat, praesentium ullam dolor libero unde dolore quis error. Aspernatur repudiandae nemo aut, natus ullam laborum quod magni omnis recusandae iusto.    \r\n', 'css', 'blog_post_1.jpg'),
+(13, 'Cách sử dụng font-end hiểu quả nhất 5', '                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat expedita nostrum magnam, eligendi voluptas, culpa ducimus odio laboriosam qui rerum dicta voluptate temporibus mollitia totam natus minima assumenda, aut quasi blanditiis! Esse, id sed ipsam quibusdam, et quisquam quasi possimus saepe libero laboriosam minus nostrum repudiandae ex consequuntur cum. Corporis.       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, necessitatibus eaque maiores accusantium, cumque laboriosam, non sint quis itaque enim quaerat veniam nulla. Nihil sed laboriosam excepturi obcaecati commodi culpa nam, numquam laborum quasi dicta cupiditate, itaque ex iusto accusantium harum illum magnam? Eius architecto tempore neque et officiis similique ab, vel ea nulla ipsam molestiae expedita aliquid cupiditate facere incidunt reprehenderit, quo libero aut perspiciatis necessitatibus dolor. Repellendus qui eveniet consectetur praesentium magni quam accusantium aspernatur? Illum quisquam accusamus animi possimus itaque eius libero. Impedit, doloribus ullam quia, eum expedita possimus deserunt totam quaerat dolorum commodi voluptatum natus eius minima vel eaque quo modi, perferendis fugiat quis illum accusantium? Facere nulla iste reiciendis vero est in accusantium vitae quisquam dicta dolorem quam delectus quasi deleniti doloremque id, quia excepturi quae nesciunt quos officia. Vitae dolorum totam optio architecto aliquam facilis, quod mollitia vel cum ad, repellendus cupiditate quasi sit est, unde vero voluptatibus. Laudantium fugiat a quia dignissimos optio, hic cum qui commodi sunt inventore nobis dolorum repudiandae magni alias aliquid nesciunt quos. Suscipit sunt ratione, laborum tenetur quaerat, praesentium ullam dolor libero unde dolore quis error. Aspernatur repudiandae nemo aut, natus ullam laborum quod magni omnis recusandae iusto.    \r\n', 'css', 'blog_post_1.jpg');
+
+CREATE TABLE `support` (
+  `support_id` int(11) NOT NULL,
+  `support_name` varchar(255) NOT NULL,
+  `support_content` varchar(500) NOT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+--
+-- Cấu trúc bảng cho bảng `tbl_admin`
+--
+CREATE TABLE `tbl_admin` (
+  `admin_id` int(11) NOT NULL,
+  `admin_name` varchar(100) NOT NULL,
+  `admin_pw` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_admin`
+--
+
+INSERT INTO `tbl_admin` (`admin_id`, `admin_name`, `admin_pw`) VALUES
+(1, 'admin', '1');
+--
+-- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
@@ -320,7 +367,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
 INSERT INTO `users` (`user_id`, `user_name`, `user_password`, `user_email`, `user_numbers`, `user_address`, `user_fullname`, `user_avatar`) VALUES
@@ -328,119 +375,162 @@ INSERT INTO `users` (`user_id`, `user_name`, `user_password`, `user_email`, `use
 (3, 'namtran.09', 'namtrannhat0961', 'nam.tran09@hcmut.edu.vn', NULL, NULL, NULL, NULL),
 (6, 'baokha', '202cb962ac59075b964b07152d234b70', '1234567@gm.edu.vn', NULL, NULL, NULL, NULL),
 (7, 'quynhanhdangiu', '202cb962ac59075b964b07152d234b70', 'quynhanh@gmail.com', NULL, NULL, NULL, NULL),
-(8, 'nam.tran09', '202cb962ac59075b964b07152d234b70', '123@gmail.com', NULL, NULL, NULL, NULL);
+(8, 'nam.tran09', '202cb962ac59075b964b07152d234b70', '123@gmail.com', NULL, NULL, NULL, NULL),
+(9, 'admin', 'c4ca4238a0b923820dcc509a6f75849b', 'admin@gmail.com', NULL, NULL, NULL, NULL);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `category`
+-- Chỉ mục cho bảng `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`category_id`);
 
 --
--- Indexes for table `courses`
+-- Chỉ mục cho bảng `courses`
 --
 ALTER TABLE `courses`
   ADD PRIMARY KEY (`course_id`);
 
 --
--- Indexes for table `course_summary`
+-- Chỉ mục cho bảng `course_summary`
 --
 ALTER TABLE `course_summary`
   ADD PRIMARY KEY (`summary_id`),
   ADD KEY `course_id` (`course_id`);
 
 --
--- Indexes for table `course_video`
+-- Chỉ mục cho bảng `course_video`
 --
 ALTER TABLE `course_video`
   ADD PRIMARY KEY (`video_id`),
   ADD KEY `course_id` (`course_id`);
 
 --
--- Indexes for table `payment_bill`
+-- Chỉ mục cho bảng `payment_bill`
 --
 ALTER TABLE `payment_bill`
   ADD PRIMARY KEY (`payment_id`);
 
 --
--- Indexes for table `purchased_course`
+-- Chỉ mục cho bảng `purchased_course`
 --
 ALTER TABLE `purchased_course`
   ADD PRIMARY KEY (`user_id`,`course_id`),
   ADD KEY `course_id` (`course_id`);
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `support`
 --
+ALTER TABLE `support`
+  ADD PRIMARY KEY (`support_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Chỉ mục cho bảng `users`
+--
+ALTER TABLE `tbl_admin`
+  ADD PRIMARY KEY (`admin_id`);
+
+--
+-- Chỉ mục cho bảng `tbl_blog`
+--
+ALTER TABLE `tbl_blog`
+  ADD PRIMARY KEY (`post_id`);
+
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `category`
+-- AUTO_INCREMENT cho bảng `category`
 --
 ALTER TABLE `category`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `courses`
+-- AUTO_INCREMENT cho bảng `courses`
 --
 ALTER TABLE `courses`
   MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `course_summary`
+-- AUTO_INCREMENT cho bảng `course_summary`
 --
 ALTER TABLE `course_summary`
   MODIFY `summary_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT for table `payment_bill`
+-- AUTO_INCREMENT cho bảng `payment_bill`
 --
 ALTER TABLE `payment_bill`
   MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `purchased_course`
+-- AUTO_INCREMENT cho bảng `purchased_course`
 --
 ALTER TABLE `purchased_course`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT cho bảng `support`
 --
+ALTER TABLE `support`
+  MODIFY `support_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
+
+--
+-- AUTO_INCREMENT cho bảng `tbl_admin`
+--
+
+ALTER TABLE `tbl_admin`
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT cho bảng `tbl_blog`
+--
+
+ALTER TABLE `tbl_blog`
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+--
+-- AUTO_INCREMENT cho bảng `users`
+--
+
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `course_summary`
+-- Các ràng buộc cho bảng `course_summary`
 --
 ALTER TABLE `course_summary`
   ADD CONSTRAINT `course_summary_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`);
 
 --
--- Constraints for table `course_video`
+-- Các ràng buộc cho bảng `course_video`
 --
 ALTER TABLE `course_video`
   ADD CONSTRAINT `course_video_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`);
 
 --
--- Constraints for table `purchased_course`
+-- Các ràng buộc cho bảng `purchased_course`
 --
 ALTER TABLE `purchased_course`
   ADD CONSTRAINT `purchased_course_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
   ADD CONSTRAINT `purchased_course_ibfk_2` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`);
+
+--
+-- Các ràng buộc cho bảng `support`
+--
+ALTER TABLE `support`
+  ADD CONSTRAINT `support_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
