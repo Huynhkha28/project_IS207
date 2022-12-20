@@ -5,7 +5,7 @@ require("../inc/myconnect.php");
 <?php
     if(isset($_POST['dangnhapadmin'])){
         $taikhoan=$_POST['taikhoan'];
-        $matkhau=$_POST['matkhau'];
+        $matkhau=md5($_POST['matkhau']);
         if($taikhoan==''|| $matkhau==''){
             echo "<p>chua nhap du thong tin</p>";
         }else{

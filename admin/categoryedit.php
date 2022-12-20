@@ -80,7 +80,8 @@ if (isset($_GET['quanly']) == 'capnhat') {
         </form>
     </div>
 <?php
-} else {
+}
+else {
 ?>
     <div class="col-3 py-3 ">
         <h3>Thêm khóa học</h3>
@@ -106,8 +107,8 @@ if (isset($_GET['quanly']) == 'capnhat') {
     $sql_select_khoahoc = mysqli_query($conn, "SELECT * FROM courses ORDER BY course_id DESC")
     ?>
     <form action="" method="POST">
-        <table class="table table-bordered">
-            <tr>
+        <table class="table">
+            <tr class="table-dark">
                 <th>STT</th>
                 <th>Tên khóa học</th>
                 <th>Mô tả</th>
@@ -129,8 +130,8 @@ if (isset($_GET['quanly']) == 'capnhat') {
                     <td><img src="../assets/img/<?php echo $row_khoahoc['course_image']?>" 
                     height="80px" width="80px" alt=""></td>
                     <td><?php echo $row_khoahoc['course_type']?></td>
-                    <td><a href="?xoa=<?php echo $row_khoahoc['course_id'] ?>">Xóa</a>
-                        ||<a href="categoryedit.php?quanly=capnhat&capnhat_id=<?php echo $row_khoahoc['course_id'] ?>">Cập nhật</a></td>
+                    <td><a href="?xoa=<?php echo $row_khoahoc['course_id'] ?>"class="btn btn-danger">Xóa</a>
+                        <a href="categoryedit.php?quanly=capnhat&capnhat_id=<?php echo $row_khoahoc['course_id'] ?>"class="btn btn-primary">Cập nhật</a></td>
                 </tr>
             <?php
             }

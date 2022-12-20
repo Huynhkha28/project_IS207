@@ -2,7 +2,7 @@
 require("../inc/myconnect.php");
 session_start();
 if (!isset($_SESSION['dangnhapadmin'])) {
-    header('Location: login_admin.php');
+    header('Location: login.php');
 }
 if (isset($_GET['login'])) {
     $dangxuat = $_GET['login'];
@@ -11,7 +11,7 @@ if (isset($_GET['login'])) {
 }
 if ($dangxuat == 'dangxuat') {
     session_destroy();
-    header('Location: login_admin.php');
+    header('Location: login.php');
 }
 ?>
 <div class="container-fluid">
@@ -32,6 +32,18 @@ if ($dangxuat == 'dangxuat') {
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Xử lý danh mục</span></a>
                         <a href="categoryedit.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Xử lý khóa học</span></a>
+                        <a href="categorylist.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Xử lý nội dung khóa học</span></a>
+                        <a href="users_admin.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Xử lý users</span></a>
+                        <a href="blog_admin.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Xử lý blog</span></a>
+                        <a href="rate_admin.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Thông báo đánh giá</span></a>
+                        <a href="support_admin.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Thông báo hỗ trợ</span></a>
+                        <a href="payment_admin.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Danh sách mua khóa học</span></a>
                     </li>
                     <li>
                         <a href="#" class="nav-link px-0 align-middle">

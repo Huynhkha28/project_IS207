@@ -57,8 +57,8 @@ if (isset($_GET['quanly']) == 'capnhat') {
     $sql_select_category = mysqli_query($conn, "SELECT * FROM category ORDER BY category_id DESC")
     ?>
     <form action="" method="POST">
-        <table class="table table-bordered">
-            <tr>
+        <table class="table" >
+            <tr class="table-dark">
                 <th>STT</th>
                 <th>Tên danh mục</th>
                 <th>Quản lý</th>
@@ -71,8 +71,8 @@ if (isset($_GET['quanly']) == 'capnhat') {
                 <tr>
                     <td><?php echo $i ?></td>
                     <td><?php echo $row_category['category_name'] ?></td>
-                    <td><a href="?xoa=<?php echo $row_category['category_id'] ?>">Xóa</a>
-                        ||<a href="?quanly=capnhat&id=<?php echo $row_category['category_id'] ?>">Cập nhật</a></td>
+                    <td><a href="?xoa=<?php echo $row_category['category_id'] ?>" class="btn btn-danger">Xóa</a>
+                        <a href="?quanly=capnhat&id=<?php echo $row_category['category_id'] ?>"class="btn btn-primary">Cập nhật</a></td>
                 </tr>
             <?php
             }
