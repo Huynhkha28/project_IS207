@@ -91,7 +91,7 @@
                         <span class="describe__title">Những khóa học khác</span>
                         <div class="row">
                         <?php
-                             $sql_remaining = "SELECT course_id, course_name, course_price, course_image FROM `courses`  WHERE course_id NOT IN (SELECT course_id FROM `courses` WHERE course_id = $id)";       
+                             $sql_remaining = "SELECT course_id, course_name, course_price, course_image FROM `courses`  WHERE course_id NOT IN (SELECT course_id FROM `courses` WHERE course_id = $id union SELECT `course_id` from `purchased_course` where user_name='$_SESSION[name]')";       
                             $resultRemaining =  $conn->query($sql_remaining);
                             if($resultRemaining->num_rows>0)
                             {

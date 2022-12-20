@@ -59,9 +59,8 @@
     height: 20px;
 }
 /*HEADER-SEARCH*/
-.navbars__search{
-    display: flex;
-    width: 200px;
+.navbars__search img{
+    border-radius: 30px;
 }
 .search__icon{
     position: relative;
@@ -281,7 +280,7 @@
     text-align: center;
     height: 30em;
     width: 100%;
-    background: url("/assets/img/Pathway.png") no-repeat;
+    background: url("../img/Pathway.png") no-repeat;
     background-size: cover;
 }
 
@@ -291,7 +290,7 @@
 }
 
 .pathway__content .front_end__pathway{
-    border: 2px solid #e8e8e8;
+    border: 2px solid #000000;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -300,7 +299,7 @@
 }
 
 .pathway__content .back_end__pathway{
-    border: 2px solid #e8e8e8;
+    border: 2px solid #000000;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -372,11 +371,13 @@
 }
 .course__img
 {
-    padding-top: 57%;
+    padding-top: 56%;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     border-radius: 22px;
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
 }
 
 .course__name{
@@ -452,4 +453,7 @@
 .footer__button__link{
     text-decoration: none;
     color:#fff;
+}
+.row{
+    margin: 0;
 }

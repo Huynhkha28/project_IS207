@@ -9,7 +9,7 @@
             <div class="col-1 content__sibebar">
                 <div class="sidebar">
                     <ul class="sidebar__list">
-                        <li class="sidebar__item"><a href="../html/pathway.html" class="sidebar__link"><i class="fa-solid fa-route sidebar__icon"></i><span class="sidebar__title">Lộ trình</span></a></li>
+                        <li class="sidebar__item"><a href="./pathway.php" class="sidebar__link"><i class="fa-solid fa-route sidebar__icon"></i><span class="sidebar__title">Lộ trình</span></a></li>
                         <li class="sidebar__item"><a href="./course.php" class="sidebar__link"><i class="fa-solid fa-book sidebar__icon"></i><span class="sidebar__title">Khóa học</span></a></li>
                         <li class="sidebar__item"><a href="./blog.php" class="sidebar__link"><i class="fa-solid fa-blog sidebar__icon"></i><span class="sidebar__title">Blog</span></a></li>
                     </ul>
@@ -30,6 +30,7 @@
                         require '../inc/truyvan.php';
                         if($resultFrontend->num_rows>0)
                             {
+                                $purchase_course = [0,0,0,0,0,0];
                                 while($row=$resultFrontend->fetch_assoc())
                                     {   
                                      ?>
@@ -44,8 +45,10 @@
                                                 }
                                                 else {
                                                     $row_purchased = $result_purchased->fetch_assoc();
+                                                    if($row_purchased != null)                                                                
+                                                        $purchase_course[$row_purchased['course_id']] = 1;
                                                     $video_id=$row['course_id'];
-                                                    if($row_purchased != null && $row_purchased['course_id'] == $row['course_id'] ){
+                                                    if($purchase_course[$row['course_id']] == 1){
                                                         switch($video_id)
                                                         {
                                                             case 1:
@@ -79,12 +82,15 @@
                             }
                         ?>
                 </div>
+                
                 <div class="row mt-5">
-                        <h3>Back-end</h3>
+                <h3>Back-end</h3>
+                        
                         <?php
                         require '../inc/truyvan.php';
                         if($resultBackend->num_rows>0)
                             {
+                                $purchase_course = [0,0,0,0,0,0];
                                 while($row=$resultBackend->fetch_assoc())
                                     {   
                                      ?>
@@ -98,10 +104,12 @@
                                                     echo '<div class="course__button"><a class="course__link__button" href="productdetails.php?id='.$row['course_id'].'">Xem chi tiết</a></div>';
                                                 }
                                                 else {
-                                                    $row_purchased_backend = $result_purchased_backend->fetch_assoc();                                                 
+                                                    $row_purchased_backend = $result_purchased_backend->fetch_assoc();  
+                                                    if($row_purchased_backend != null)                                                                
+                                                        $purchase_course[$row_purchased_backend['course_id']] = 1;                                               
                                                     $video_id=$row['course_id'];
-                                                    if($row_purchased_backend != null){
-                                                        if($row_purchased_backend['course_id'] == $row['course_id']){
+                                                    if($purchase_course[$row['course_id']] == 1){
+                                                        
                                                         switch($video_id)
                                                         {
                                                             case 1:
@@ -122,12 +130,6 @@
                                                         } 
                                                         echo '<div class="course__price"><span>Bạn đã sở hữu khóa học</span></div>';                                                                                                     
                                                         echo '<div class="course__button"><a class="course__link__button" href="learn.php?course_id='.$row['course_id'].'&videoid='.$video_id.'">Học ngay</a></div>'; 
-                                                    }
-                                                        else{
-                                                            echo '<div class="course__price"><span>' .$row['course_price']. ' VNĐ</span></div>';
-                                                        echo '<div class="course__button"><a class="course__link__button" href="productdetails.php?id='.$row['course_id'].'">Xem chi tiết</a></div>';
-                                                        }
-                                                      
                                                     }
                                                     else{
                                                         echo '<div class="course__price"><span>' .$row['course_price']. ' VNĐ</span></div>';
