@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="../assets/font/fontawesome-free-6.1.2-web/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.bundle.min.js" integrity="sha512-BOsvKbLb0dB1IVplOL9ptU1EYA+LuCKEluZWRUYG73hxqNBU85JBIBhPGwhQl7O633KtkjMv8lvxZcWP+N3V3w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/index.js"></script>
     <link rel="stylesheet" href="../assets/css/<?php echo $css_link?>">
@@ -25,13 +24,12 @@
                 <div class="col-4 navbar-expand-sm navbars__menu">
                     <ul class="navbars__list">
                         <li class="nav-item navbars__item "><a href="../php/index.php" class="navbars__link">Trang chủ</a></li>
-                        
                         <li class="nav-item navbars__item "><a href="../php/evaluation.php" class="navbars__link">Đánh giá</a></li>
                         <li class="nav-item navbars__item "><a href="../php/support.php" class="navbars__link">Hỗ trợ</a></li>
                     </ul>
                 </div>
                 <div class="col-5 navbars__search d-flex justify-content-center">
-                   <img src="../assets/img/Huynh_Kha_a_logo_with_computer_headphones_keyboard_and_mouse_0c907fbb-c501-408f-b1f8-169e6c0fe5c1.png" alt="">
+                   <a href="./index.php" class="d-flex justify-content-center"><img src="../assets/img/Huynh_Kha_a_logo_with_computer_headphones_keyboard_and_mouse_0c907fbb-c501-408f-b1f8-169e6c0fe5c1.png" alt=""></a>
                 </div>
                     <?php
                         if(isset($_SESSION['logged_in']))
@@ -55,8 +53,8 @@
                         }
                         else{
                             echo '<div class="col-3 navbars__login d-flex justify-content-end">';
-                            printf('<button class="btn navbars__button--dk me-3" id="sign-up-btn" onclick="signUp()"><p class="navbars__button__hover--dk">Đăng ký</p></button>
-                            <button class="btn btn-secondary navbars__button--dn" id="sign-in-btn"  onclick="signIn()" ><p class="navbars__button__hover--dn">Đăng nhập</p></button>'); 
+                            printf('<button class="navbars__button--dk me-3" id="sign-up-btn" onclick="signUp()"><p class="navbars__button__hover--dk">Đăng ký</p></button>
+                            <button class="btn-secondary navbars__button--dn" id="sign-in-btn"  onclick="signIn()" ><p class="navbars__button__hover--dn">Đăng nhập</p></button>'); 
                         }
                     ?>
                     <!-- <a href="" class="navbars_notification"><i class="fa-solid fa-bell"></i></a> -->
