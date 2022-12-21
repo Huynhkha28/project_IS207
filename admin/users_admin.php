@@ -103,7 +103,7 @@ if (isset($_GET['quanly']) == 'capnhat') {
                 <th>Tên user_numbers</th>
                 <th>Tên user_address</th>
                 <th>Tên user_fullname</th>
-                <th>quanly</th>
+                <th>Quản lý</th>
             </tr>
             <?php
             $i = 0;
