@@ -23,7 +23,7 @@ if(isset($_GET['xoa'])){
                 <th>Số sao đánh giá</th>
                 <th>Nội dung đánh giá</th>
                 <th>Tài khoản đánh giá</th>
-                <th>quanly</th>
+                <th>Quản lý</th>
             </tr>
             <?php
             $i = 0;

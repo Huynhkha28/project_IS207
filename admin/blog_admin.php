@@ -108,7 +108,7 @@ if (isset($_GET['quanly']) == 'capnhat') {
                 <th>Chi tiết bài viết</th>
                 <th>Loại kiến thức tìm hiểu</th>
                 <th>Ảnh mô tả</th>
-                <th>quanly</th>
+                <th>Quản lý</th>
             </tr>
             <?php
             $i = 0;

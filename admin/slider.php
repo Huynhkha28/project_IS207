@@ -23,7 +23,7 @@ if ($dangxuat == 'dangxuat') {
                 </a>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item">
-                        <a href="#" class="nav-link align-middle px-0">
+                        <a href="categoryadd.php" class="nav-link align-middle px-0">
                             <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-sm-inline">Trang chủ</span>
                         </a>
                     </li>
