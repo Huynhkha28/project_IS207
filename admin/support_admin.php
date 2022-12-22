@@ -33,7 +33,7 @@ if(isset($_GET['xoa'])){
                 <th>Tên hỗ trợ</th>
                 <th>Nội dung hỗ trợ</th>
                 <th>Tài khoản users cần hỗ trợ</th>
-                <th>quanly</th>
+                <th>Quản lý</th>
             </tr>
             <?php
             $i = 0;

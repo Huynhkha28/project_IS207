@@ -25,7 +25,7 @@ if(isset($_GET['xoa'])){
                 <th>Giá thanh toán</th>
                 <th>Tên khóa học</th>
                 <th>Tên users</th>
-                <th>quanly</th>
+                <th>Quản lý</th>
             </tr>
             <?php
             $i = 0;
