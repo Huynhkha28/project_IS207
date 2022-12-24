@@ -50,10 +50,16 @@ if(isset($_GET['xoa'])){
 }
 ?>
 
-
+<?php
+if (isset($_GET['quanly'])) {
+    $tam = $_GET['quanly'];
+} else {
+    $tam = '';
+}
+?>
 
 <?php
-if (isset($_GET['quanly']) == 'capnhat') {
+if ($tam == 'capnhat') {
     $id_capnhat=$_GET['capnhat_id'];
     $sql_capnhat=mysqli_query($conn,"SELECT*from courses where course_id='$id_capnhat'");
     $row_capnhat=mysqli_fetch_array($sql_capnhat);
@@ -90,11 +96,11 @@ else {
             <label for="">Hình ảnh: </label>
             <input required type="file" name="hinhanh" class="input__danhmuc">
             <label for="">Giá khóa học: </label>
-            <input required type="text" name="giakhoahoc" class="input__danhmuc" placeholder="Nhập để thêm mô tả khóa học"><br>
+            <input required type="text" name="giakhoahoc" class="input__danhmuc" placeholder="Nhập giá khóa học"><br>
             <label for="">Mô tả khóa học: </label>
             <textarea class="form-control" name="mota"></textarea>
             <label for="">Loại khóa học: </label>
-            <input required type="text" name="loaikhoahoc" class="input__danhmuc" placeholder="Nhập để thêm khoa hoc"><br>
+            <input required type="text" name="loaikhoahoc" class="input__danhmuc" placeholder="Nhập loại khóa học"><br>
             <button name="themkhoahoc" type="submit" class="btn btn-outline-danger m-lg-2">Thêm</button>
         </form>
     </div>
@@ -130,8 +136,8 @@ else {
                     <td><img src="../assets/img/<?php echo $row_khoahoc['course_image']?>" 
                     height="80px" width="80px" alt=""></td>
                     <td><?php echo $row_khoahoc['course_type']?></td>
-                    <td><a href="?xoa=<?php echo $row_khoahoc['course_id'] ?>"class="btn btn-danger">Xóa</a>
-                        <a href="categoryedit.php?quanly=capnhat&capnhat_id=<?php echo $row_khoahoc['course_id'] ?>"class="btn btn-primary">Cập nhật</a></td>
+                    <td width="20%"><a href="?quanly=xoa1&xoa1=<?php echo $row_khoahoc['course_id'] ?>"class="btn btn-danger">Xóa</a>
+                        <a href="courses.php?quanly=capnhat&capnhat_id=<?php echo $row_khoahoc['course_id'] ?>"class="btn btn-primary">Cập nhật</a></td>
                 </tr>
             <?php
             }
@@ -139,3 +145,7 @@ else {
         </table>
     </form>
 </div>
+
+<?php
+include "../admin/noti_dl.php";
+?>

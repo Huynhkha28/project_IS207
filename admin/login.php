@@ -3,11 +3,12 @@ session_start();
 require("../inc/myconnect.php");
 ?>
 <?php
+    $kq='';
     if(isset($_POST['dangnhapadmin'])){
         $taikhoan=$_POST['taikhoan'];
         $matkhau=md5($_POST['matkhau']);
         if($taikhoan==''|| $matkhau==''){
-            echo "<p>chua nhap du thong tin</p>";
+            $kq = "Chưa nhập đầy đủ thông tin";
         }else{
             $sql_select_admin = mysqli_query($conn,"SELECT * From tbl_admin where admin_name ='$taikhoan' AND admin_pw='$matkhau' LIMIT 1");
             $count =mysqli_num_rows($sql_select_admin);
@@ -18,7 +19,7 @@ require("../inc/myconnect.php");
                 header('Location: categoryadd.php');
             }
             else{
-                echo "<p>tai khoan hoac mat khau sai</p>";
+                $kq = "Tài khoản hoặc mật khẩu sai";
             }
         }
     } 
@@ -50,6 +51,7 @@ require("../inc/myconnect.php");
                         </div>
                     </div>
                     <form action="" class="signin-form" method="POST">
+                    <span style="color: red;"><?php echo $kq ?></span>
                         <div class="form-group mb-3">
                             <label>Tên đăng nhập</label>
                             <input type="text" name="taikhoan" class="form-control">

@@ -7,7 +7,7 @@ include "slider.php";
 <?php
 if(isset($_GET['xoa'])){
     $id=$_GET['xoa'];
-    $sql_dl = mysqli_query($conn,"DELETE from rate where rate_id='$id'");   
+    $sql_dl = mysqli_query($conn,"DELETE from purchased_course where purchased_id='$id'");   
 }
 ?>
 
@@ -19,7 +19,7 @@ if (isset($_GET['quanly'])) {
 }
 ?>
 
-<div class="col-7 py-3 ">
+<div class="col-7 py-2 ">
     <h3>Danh sách đánh giá</h3>
     <?php
     if (isset($_GET['trang'])) {
@@ -32,39 +32,38 @@ if (isset($_GET['quanly'])) {
     } else {
         $begin = ($page * 10) - 10;
     }
-    $sql_select_rate = mysqli_query($conn, "SELECT * FROM rate,users where rate.user_id=users.user_id
-    ORDER BY rate.rate_id DESC LIMIT $begin,10")
+    $sql_select_purchased = mysqli_query($conn, "SELECT * FROM purchased_course,courses
+    where purchased_course.course_id=courses.course_id
+    ORDER BY purchased_course.user_id DESC LIMIT $begin,10")
     ?>
     <form action="" method="POST">
         <table class="table">
             <tr class="table-dark">
                 <th>STT</th>
-                <th>Số sao đánh giá</th>
-                <th>Nội dung đánh giá</th>
-                <th>Tài khoản đánh giá</th>
+                <th>Tên khóa học</th>
+                <th>Tên người mua</th>
                 <th>quanly</th>
             </tr>
             <?php
             $i = 0;
-            while ($row_select_rate = mysqli_fetch_array($sql_select_rate)) {
+            while ($row_select_purchased = mysqli_fetch_array($sql_select_purchased)) {
                 $i++;
             ?>
                 <tr>
                     <td><?php echo $i ?></td>
-                    <td><?php echo $row_select_rate['rate_star'] ?></td>
-                    <td><?php echo $row_select_rate['rate_content'] ?></td>
-                    <td><?php echo $row_select_rate['user_name'] ?></td>
-                    <td><a href="?quanly=xoa1&xoa1=<?php echo $row_select_rate['rate_id'] ?>" class="btn btn-danger">Xóa</a></td>
+                    <td><?php echo $row_select_purchased['course_name'] ?></td>
+                    <td><?php echo $row_select_purchased['user_name'] ?></td>
+                    <td><a href="?quanly=xoa1&xoa1=<?php echo $row_select_purchased['purchased__id'] ?>" class="btn btn-danger">Xóa</a></td>
                 </tr>
             <?php
             }
             ?>
             <?php
-        $sql_trang = mysqli_query($conn, "SELECT*FROM tbl_blog");
-        $row_count = mysqli_num_rows($sql_trang);
-        $trang = ceil($row_count / 10);
-        ?>
-        <ul class="pagination">
+            $sql_trang = mysqli_query($conn, "SELECT*FROM purchased_course");
+            $row_count = mysqli_num_rows($sql_trang);
+            $trang = ceil($row_count / 10);
+            ?>
+            <ul class="pagination">
             <?php
             for ($i = 1; $i <= $trang; $i++) {
             ?>
@@ -73,7 +72,7 @@ if (isset($_GET['quanly'])) {
                     } else {
                         echo '';
                     } ?>"><a class="page-link" <?php if ($i == $page) {
-                            } ?>class="active" href="rate_admin.php?trang=<?php echo $i ?>"><?php echo $i ?></a></li>
+                            } ?>class="active" href="purchased_admin.php?trang=<?php echo $i ?>"><?php echo $i ?></a></li>
             <?php
             }
             ?>
