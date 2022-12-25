@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 14, 2022 lúc 05:37 PM
--- Phiên bản máy phục vụ: 10.4.25-MariaDB
--- Phiên bản PHP: 8.1.10
+-- Thời gian đã tạo: Th12 25, 2022 lúc 04:17 PM
+-- Phiên bản máy phục vụ: 10.4.27-MariaDB
+-- Phiên bản PHP: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,17 +30,16 @@ SET time_zone = "+00:00";
 CREATE TABLE `category` (
   `category_id` int(11) NOT NULL,
   `category_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `category`
 --
 
 INSERT INTO `category` (`category_id`, `category_name`) VALUES
-(13, 'Trang chủ'),
-(14, 'Đánh giá'),
-(15, 'Hỗ Trợ'),
-
+(24, 'trang chủ\r\n'),
+(25, 'trang chủ 123'),
+(27, 'chi tiết');
 
 -- --------------------------------------------------------
 
@@ -55,7 +54,7 @@ CREATE TABLE `courses` (
   `course_price` varchar(255) NOT NULL,
   `course_image` varchar(255) NOT NULL,
   `course_type` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `courses`
@@ -78,7 +77,7 @@ CREATE TABLE `course_summary` (
   `summary_id` int(11) NOT NULL,
   `course_id` int(11) NOT NULL,
   `summary` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `course_summary`
@@ -113,12 +112,12 @@ INSERT INTO `course_summary` (`summary_id`, `course_id`, `summary`) VALUES
 --
 
 CREATE TABLE `course_video` (
-  `video_id` varchar(255) NOT NULL,
+  `video_id` int(11) NOT NULL,
   `course_id` int(11) NOT NULL,
   `video_name` varchar(255) NOT NULL,
   `video_link` varchar(255) NOT NULL,
   `video_time` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `course_video`
@@ -266,10 +265,17 @@ INSERT INTO `course_video` (`video_id`, `course_id`, `video_name`, `video_link`,
 
 CREATE TABLE `payment_bill` (
   `payment_id` int(11) NOT NULL,
-  `course_price` int(11) NOT NULL,
+  `course_price` varchar(50) NOT NULL,
   `course_id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `payment_bill`
+--
+
+INSERT INTO `payment_bill` (`payment_id`, `course_price`, `course_id`, `user_id`) VALUES
+(3, '2000000', 5, 10);
 
 -- --------------------------------------------------------
 
@@ -278,29 +284,11 @@ CREATE TABLE `payment_bill` (
 --
 
 CREATE TABLE `purchased_course` (
-  `purchased_id` int(11) NOT null,
+  `purchased_id` int(11) NOT null PRIMARY KEY,
   `user_id` int(11) NOT NULL,
   `course_id` int(11) NOT NULL,
   `user_name` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Đang đổ dữ liệu cho bảng `purchased_course`
---
-
-INSERT INTO `purchased_course` (`user_id`, `course_id`, `user_name`) VALUES
-(2, 1, 'huynhkha123'),
-(2, 2, 'huynhkha123'),
-(6, 1, 'baokha'),
-(6, 2, 'baokha'),
-(6, 3, 'baokha'),
-(6, 4, 'baokha'),
-(6, 5, 'baokha'),
-(9, 1, 'admin'),
-(9, 2, 'admin'),
-(9, 3, 'admin'),
-(9, 4, 'admin'),
-(9, 5, 'admin'),
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 -- --------------------------------------------------------
@@ -314,18 +302,7 @@ CREATE TABLE `rate` (
   `rate_star` int(11) NOT NULL,
   `rate_content` varchar(255) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Đang đổ dữ liệu cho bảng `rate`
---
-
-INSERT INTO `rate` (`rate_id`, `rate_star`, `rate_content`, `user_id`) VALUES
-(1, 5, 'ádd', 9),
-(2, 5, 'ádđ', 9),
-(3, 5, 'ádđ', 9),
-(4, 5, 'Trang web rất hay', 9),
-(6, 5, 'Web quá tuyệt vời', 9),
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -338,15 +315,14 @@ CREATE TABLE `support` (
   `support_name` varchar(255) NOT NULL,
   `support_content` varchar(500) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `support`
 --
 
 INSERT INTO `support` (`support_id`, `support_name`, `support_content`, `user_id`) VALUES
-(22, 'htkhoahoc', 'abc', 7),
-(23, 'htkhoahoc', 'abcd', 7);
+(108, 'htkhoahoc', 'không thanh toán được', 9);
 
 -- --------------------------------------------------------
 
@@ -358,7 +334,7 @@ CREATE TABLE `tbl_admin` (
   `admin_id` int(11) NOT NULL,
   `admin_name` varchar(100) NOT NULL,
   `admin_pw` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `tbl_admin`
@@ -379,7 +355,7 @@ CREATE TABLE `tbl_blog` (
   `post_mota` text NOT NULL,
   `post_tags` varchar(50) NOT NULL,
   `post_image` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `tbl_blog`
@@ -406,7 +382,7 @@ CREATE TABLE `users` (
   `user_numbers` varchar(20) DEFAULT NULL,
   `user_address` varchar(300) DEFAULT NULL,
   `user_fullname` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `users`
@@ -420,6 +396,7 @@ INSERT INTO `users` (`user_id`, `user_name`, `user_password`, `user_email`, `use
 (8, 'nam.tran09', '202cb962ac59075b964b07152d234b70', '123@gmail.com', NULL, NULL, NULL),
 (9, 'admin', '202cb962ac59075b964b07152d234b70', 'admin@gmail.com', '0', 'Tây Ninh', 'Huỳnh Diệp Bảo Kha'),
 (10, 'baokha123', '207b40d2b18eacd5f71df1ff5f72eb8e', '13@gmail.com', NULL, NULL, 'Huỳnh Diệp Bảo Kha'),
+(12, 'dung', 'c4ca4238a0b923820dcc509a6f75849b', '', NULL, NULL, '');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -454,13 +431,8 @@ ALTER TABLE `course_video`
 --
 -- Chỉ mục cho bảng `payment_bill`
 --
-
-
---
--- Chỉ mục cho bảng `purchased_course`
---
-ALTER TABLE `purchased_course`
-  ADD PRIMARY KEY (`purchased_id`),
+ALTER TABLE `payment_bill`
+  ADD PRIMARY KEY (`payment_id`);
 
 --
 -- Chỉ mục cho bảng `rate`
@@ -502,28 +474,33 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `category`
 --
 ALTER TABLE `category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT cho bảng `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT cho bảng `course_summary`
 --
 ALTER TABLE `course_summary`
-  MODIFY `summary_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `summary_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
+--
+-- AUTO_INCREMENT cho bảng `course_video`
+--
+ALTER TABLE `course_video`
+  MODIFY `video_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=291;
 
 --
 -- AUTO_INCREMENT cho bảng `payment_bill`
 --
 ALTER TABLE `payment_bill`
-  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT cho bảng `purchased_course`
+-- AUTO_INCREMENT cho bảng `payment_bill`
 --
 ALTER TABLE `purchased_course`
   MODIFY `purchased_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
@@ -532,7 +509,7 @@ ALTER TABLE `purchased_course`
 -- AUTO_INCREMENT cho bảng `rate`
 --
 ALTER TABLE `rate`
-  MODIFY `rate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `rate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `support`
@@ -550,13 +527,13 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT cho bảng `tbl_blog`
 --
 ALTER TABLE `tbl_blog`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
@@ -580,6 +557,7 @@ ALTER TABLE `course_video`
 ALTER TABLE `purchased_course`
   ADD CONSTRAINT `purchased_course_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
   ADD CONSTRAINT `purchased_course_ibfk_2` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`);
+
 --
 -- Các ràng buộc cho bảng `rate`
 --
