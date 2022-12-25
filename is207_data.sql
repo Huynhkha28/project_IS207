@@ -37,9 +37,9 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`category_id`, `category_name`) VALUES
-(24, 'trang chủ\r\n'),
-(25, 'trang chủ 123'),
-(27, 'chi tiết');
+(13, 'Trang chủ'),
+(14, 'Đánh giá'),
+(15, 'Hỗ Trợ'),
 
 -- --------------------------------------------------------
 
@@ -284,7 +284,6 @@ INSERT INTO `payment_bill` (`payment_id`, `course_price`, `course_id`, `user_id`
 --
 
 CREATE TABLE `purchased_course` (
-  `purchased_id` int(11) NOT null PRIMARY KEY,
   `user_id` int(11) NOT NULL,
   `course_id` int(11) NOT NULL,
   `user_name` varchar(255) DEFAULT NULL
@@ -303,6 +302,7 @@ CREATE TABLE `rate` (
   `rate_content` varchar(255) NOT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 -- --------------------------------------------------------
 
@@ -435,6 +435,12 @@ ALTER TABLE `payment_bill`
   ADD PRIMARY KEY (`payment_id`);
 
 --
+-- Chỉ mục cho bảng `purchased_course`
+--
+ALTER TABLE `purchased_course`
+  ADD PRIMARY KEY (`user_id`,`course_id`),
+  ADD KEY `course_id` (`course_id`);
+--
 -- Chỉ mục cho bảng `rate`
 --
 ALTER TABLE `rate`
@@ -499,11 +505,6 @@ ALTER TABLE `course_video`
 --
 ALTER TABLE `payment_bill`
   MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT cho bảng `payment_bill`
---
-ALTER TABLE `purchased_course`
-  MODIFY `purchased_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT cho bảng `rate`
