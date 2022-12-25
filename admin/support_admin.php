@@ -60,7 +60,7 @@ if (isset($_GET['quanly'])) {
             }
             ?>
             <?php
-            $sql_trang = mysqli_query($conn, "SELECT*FROM tbl_blog");
+            $sql_trang = mysqli_query($conn, "SELECT*FROM support");
             $row_count = mysqli_num_rows($sql_trang);
             $trang = ceil($row_count / 6);
             ?>
