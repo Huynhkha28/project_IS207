@@ -9,8 +9,8 @@ if(isset($_GET['xoa'])){
     $id=$_GET['xoa'];
     $id_xoa=$_GET['xoa_kh_id'];
     $sql_dl = mysqli_query($conn,"DELETE from purchased_course where course_id='$id' and user_id='$id_xoa'");   
-    printf($id);
-    printf($id_xoa);
+    // printf($id);
+    // printf($id_xoa);
 }
 ?>
 
