@@ -7,7 +7,10 @@ include "slider.php";
 <?php
 if(isset($_GET['xoa'])){
     $id=$_GET['xoa'];
-    $sql_dl = mysqli_query($conn,"DELETE from purchased_course where purchased_id='$id'");   
+    $id_xoa=$_GET['xoa_kh_id'];
+    $sql_dl = mysqli_query($conn,"DELETE from purchased_course where course_id='$id' and user_id='$id_xoa'");   
+    // printf($id);
+    // printf($id_xoa);
 }
 ?>
 
@@ -53,7 +56,7 @@ if (isset($_GET['quanly'])) {
                     <td><?php echo $i ?></td>
                     <td><?php echo $row_select_purchased['course_name'] ?></td>
                     <td><?php echo $row_select_purchased['user_name'] ?></td>
-                    <td><a href="?quanly=xoa1&xoa1=<?php echo $row_select_purchased['purchased__id'] ?>" class="btn btn-danger">Xóa</a></td>
+                    <td><a href="?quanly=xoa1&xoa1=<?php echo $row_select_purchased['course_id']?>&xoa_kh=<?php echo $row_select_purchased['user_id'] ?>" class="btn btn-danger">Xóa</a>
                 </tr>
             <?php
             }
@@ -82,5 +85,24 @@ if (isset($_GET['quanly'])) {
 </div>
 
 <?php
-include "../admin/noti_dl.php";
+if($tam=='xoa1'){
+    $xoa1=$_GET['xoa1'];
+    $xoa_kh = $_GET['xoa_kh'];
+?>
+<form action="" method="POST">
+<div id="modal-container">
+    <div id="modal">
+        <div class="modal-header">
+            <h5>Bạn có muốn xóa không</h5>
+            <a href="?capnhat" id="btn-close"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+        <div class="modal-body">
+            <a href="?quanly=xoa&xoa=<?php echo $xoa1 ?>&xoa_kh_id=<?php echo $xoa_kh ?>"class="btn btn-danger">Xóa</a>
+            <a href="?capnhat" class="btn btn-primary">Không</a>
+        </div>
+    </div>
+</div>
+</form>
+<?php
+}
 ?>
