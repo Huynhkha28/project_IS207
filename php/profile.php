@@ -55,15 +55,17 @@
                     $newpassword = md5($_POST['newpassword']);
                     $sql_change_password = "UPDATE `users` SET `user_password`='$newpassword' where `user_name` = '$user_name'";
                 }
+                mysqli_query($conn, $sql_change_password);
             }
-            mysqli_query($conn, $sql_change_password);
+            else $kq = "Thay đổi thất bại";
         }
     }
 ?>
 <script>
     $(document).ready(function() {
         var kq = '<?php echo $kq; ?>';
-        alert(kq);
+        if (kq == "Thay đổi thành công" || kq == "Thay đổi thất bại")
+            alert(kq);
         $(".btn__change button").click(function(){
             label = this.value.toString();
             str = "<form class='modal__content' action='profile.php?user_name=<?php echo $user_name?>' method='POST'>";
