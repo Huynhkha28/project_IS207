@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `is207`
 --
-
+CREATE DATABASE `is207`
 -- --------------------------------------------------------
 
 --
@@ -275,7 +275,7 @@ CREATE TABLE `payment_bill` (
 --
 
 INSERT INTO `payment_bill` (`payment_id`, `course_price`, `course_id`, `user_id`) VALUES
-(3, '2000000', 5, 10);
+(1, '1000000', 5, 10);
 
 -- --------------------------------------------------------
 
