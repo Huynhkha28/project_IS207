@@ -1,0 +1,37 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: inherit;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.body{
+    box-sizing: border-box;
+}
+.app{
+    height: 2000px;
+}
+
+.category__header h1{
+    text-align: center;
+    font-size: 40px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+
+}
+.input__danhmuc{
+    width: 300px;
+    padding: 5px 0;
+}
+.add__danhmuc__btn{
+    width: 100px;
+}
+.category_list table{
+    width: 100%;
+    text-align: center;    
+}
+.category_list table tr th,.category_list table tr td{
+    border: 1px solid #a7a6a6;
+}
+table {
+    border-collapse: collapse;
+}

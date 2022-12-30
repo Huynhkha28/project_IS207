@@ -6,7 +6,6 @@
 }
 .body{
     box-sizing: border-box;
-    
 }
 
 /*HEADER*/
@@ -38,24 +37,30 @@
 }
 .navbars__item{
     list-style: none;
-    padding: 22px 15px 14px 15px;
+    
 }
 .navbars__item:hover{
     background-color: rgba(0,0,0, 0.1);
     cursor: pointer;
     border-bottom: 2px solid #333;
 }
-
+.navbars__link:hover{
+    background-color: rgba(0,0,0, 0.1);
+}
 .navbars__link{
+    position: relative;
+    top:40%;
     text-decoration: none;
+    
+    padding: 27px 20px 18px 20px;
+    background-color: #fff;
     color: black;
     font-size: 16px;
     height: 20px;
 }
 /*HEADER-SEARCH*/
-.navbars__search{
-    display: flex;
-    width: 200px;
+.navbars__search img{
+    border-radius: 30px;
 }
 .search__icon{
     position: relative;
@@ -98,11 +103,12 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    padding: 9px 18px;
+    padding: 0px 10px;
     text-align: center;
     position: relative;
-    top:18%;
     float: right;
+    height: 50%;
+    top:27%
 }
 .navbars__button--dn:hover{
     opacity: 0.8;
@@ -116,7 +122,6 @@
     border: none;
     background-color: transparent;
     position: relative;
-    top: 32%;
     font-size: 16px;
     float: left;
     text-align: center;
@@ -126,11 +131,87 @@
     transform: translateY(-2px);
     cursor: pointer;
 }
+
+.navbars__button__dx__link{
+    text-decoration: none;
+    position: relative;
+    top:18%;
+    color: #fff;
+}
+.navbars__button__dx__link:hover{
+    color: #000;
+
+}
+.navbars__button__dx{
+    align-items: center;
+    border-radius: 10px;
+    background-color: #000;
+    top: 20%;
+    height: 50%;
+    position: relative;
+    padding: 0 6px;
+    cursor: pointer;
+}
+.navbars__button__dx:hover{
+    background-color: #e8e8e8;
+}
+.navbars__button__hello{
+    color: #000;
+    position: relative;
+    top:10%;
+    height: fit-content;
+}
+
+/*DROP DOWN BTN */
+.dropbtn {
+    background-color: transparent;
+    color: #000;
+    padding: 16px 0  ;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 10px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.profile__btn{
+    outline: none;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
 /*CONTENT*/
 .content{
     width: auto;
     display: flex;
-    height: 2000px;
+    height: auto;
 }
 .content__sidebar{
     position: relative;
@@ -183,10 +264,7 @@
     position: relative;
  
 }
-.sidebar__link:hover{
-    
 
-}
 .sidebar__icon{
     text-align: center;
 }
@@ -202,7 +280,7 @@
     text-align: center;
     height: 30em;
     width: 100%;
-    background: url("/assets/img/Pathway.png") no-repeat;
+    background: url("../img/Pathway.png") no-repeat;
     background-size: cover;
 }
 
@@ -212,7 +290,7 @@
 }
 
 .pathway__content .front_end__pathway{
-    border: 2px solid #e8e8e8;
+    border: 2px solid #000000;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -221,7 +299,7 @@
 }
 
 .pathway__content .back_end__pathway{
-    border: 2px solid #e8e8e8;
+    border: 2px solid #000000;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -252,12 +330,13 @@
     margin-right: 16px;
     margin-top: 16px;
 }
-.introduce_img{
-    display: block;
-    width: 100%;
+.introduce__img{
     height: auto;
-    position: relative;
-    background-size: auto;
+    width: 100%;
+    border-radius: 20px;
+}
+.container__introduce{
+    height: 850px;
 }
 .introduce__title{
     font-size: 40px;
@@ -287,8 +366,66 @@
     }
   }
 
+.content__course h3{
+    font-size: 28px;
+}
+.course__img
+{
+    padding-top: 56%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 22px;
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
 
+.course__name{
+    margin-top: 10px;
+    min-height: 40px;
+}
+.course__name span {
+    font-size: 20px;
+    font-weight: 700;
+}
+.course__price {
+    margin-top:10px ;
+}
+.course__price span{
+    font-weight: 700;
+}
+.course__button{
+    padding:10px;
+    display: flex;
+    justify-content: center;
+}
+.course__link__button{
+    padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
 
+.course__link__button:hover{
+    background-color: #010101;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.course__link__button:active {
+    transform: translateY(-1px);
+  }
+/*-----------------------------FOOTER---------------------------*/
 .footer{
     background-color: var(--black-color);
     color:#fff;
@@ -317,3 +454,10 @@
     text-decoration: none;
     color:#fff;
 }
+<<<<<<< Updated upstream
+.row{
+    margin: 0;
+}
+=======
+
+>>>>>>> Stashed changes

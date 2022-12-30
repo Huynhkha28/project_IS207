@@ -21,3 +21,13 @@
 .hover:hover{
     color: rgba(0, 0, 0, 0.5)
 }
+.back-home{
+  width: 250px;
+  position: relative;
+  top: 5px;
+}
+.btn-backhome{
+    text-decoration: none;
+    color: black;
+}
+
